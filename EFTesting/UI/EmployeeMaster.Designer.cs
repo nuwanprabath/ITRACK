@@ -30,7 +30,6 @@
         {
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label20 = new System.Windows.Forms.Label();
             this.lblDepartment = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.imgprofile = new DevExpress.XtraEditors.PictureEdit();
@@ -58,6 +57,7 @@
             this.txtEmployeeID = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.memoAddress = new DevExpress.XtraEditors.MemoEdit();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.gridPromotion = new DevExpress.XtraGrid.GridControl();
+            this.grdPromotion = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
@@ -94,7 +94,6 @@
             this.textEdit6 = new DevExpress.XtraEditors.TextEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -119,7 +118,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMobileNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridPromotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPromotion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.xtraTabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridAward)).BeginInit();
@@ -153,7 +152,6 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.label20);
             this.xtraTabPage1.Controls.Add(this.lblDepartment);
             this.xtraTabPage1.Controls.Add(this.lblName);
             this.xtraTabPage1.Controls.Add(this.imgprofile);
@@ -184,16 +182,6 @@
             this.xtraTabPage1.Size = new System.Drawing.Size(1071, 436);
             this.xtraTabPage1.Text = "Basic Details";
             this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label20.Location = new System.Drawing.Point(173, 118);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(149, 13);
-            this.label20.TabIndex = 47;
-            this.label20.Text = "Basic Information Details";
             // 
             // lblDepartment
             // 
@@ -452,6 +440,7 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.Controls.Add(this.label21);
+            this.xtraTabPage2.Controls.Add(this.label20);
             this.xtraTabPage2.Controls.Add(this.memoAddress);
             this.xtraTabPage2.Controls.Add(this.label16);
             this.xtraTabPage2.Controls.Add(this.label15);
@@ -473,16 +462,24 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label21.Location = new System.Drawing.Point(44, 33);
+            this.label21.Location = new System.Drawing.Point(46, 219);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(93, 13);
-            this.label21.TabIndex = 25;
-            this.label21.Text = "Contact Details";
+            this.label21.Size = new System.Drawing.Size(116, 13);
+            this.label21.TabIndex = 26;
+            this.label21.Text = "Education Qualification";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(43, 10);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(201, 13);
+            this.label20.TabIndex = 25;
+            this.label20.Text = "Emergancy Contact Person / Contact No";
             // 
             // memoAddress
             // 
-            this.memoAddress.Location = new System.Drawing.Point(617, 130);
+            this.memoAddress.Location = new System.Drawing.Point(619, 113);
             this.memoAddress.Name = "memoAddress";
             this.memoAddress.Properties.NullValuePrompt = "Please Ener Address";
             this.memoAddress.Properties.NullValuePromptShowForEmptyValue = true;
@@ -493,7 +490,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(499, 133);
+            this.label16.Location = new System.Drawing.Point(501, 116);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(46, 13);
             this.label16.TabIndex = 24;
@@ -502,7 +499,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(44, 133);
+            this.label15.Location = new System.Drawing.Point(46, 116);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(104, 13);
             this.label15.TabIndex = 23;
@@ -511,7 +508,7 @@
             // txtEmgContactPerson
             // 
             this.txtEmgContactPerson.EditValue = "";
-            this.txtEmgContactPerson.Location = new System.Drawing.Point(162, 130);
+            this.txtEmgContactPerson.Location = new System.Drawing.Point(164, 113);
             this.txtEmgContactPerson.Name = "txtEmgContactPerson";
             this.txtEmgContactPerson.Properties.AccessibleDescription = "";
             this.txtEmgContactPerson.Properties.NullValuePrompt = "Please Enter Emergency Contact Person";
@@ -522,7 +519,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(499, 98);
+            this.label14.Location = new System.Drawing.Point(501, 81);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(84, 13);
             this.label14.TabIndex = 21;
@@ -531,7 +528,7 @@
             // txtEmgNo
             // 
             this.txtEmgNo.EditValue = "";
-            this.txtEmgNo.Location = new System.Drawing.Point(617, 95);
+            this.txtEmgNo.Location = new System.Drawing.Point(619, 78);
             this.txtEmgNo.Name = "txtEmgNo";
             this.txtEmgNo.Properties.AccessibleDescription = "";
             this.txtEmgNo.Properties.NullValuePrompt = "Please Enter Emergency Contact Number";
@@ -542,7 +539,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(44, 98);
+            this.label13.Location = new System.Drawing.Point(46, 81);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 19;
@@ -551,7 +548,7 @@
             // txtLandNo
             // 
             this.txtLandNo.EditValue = "";
-            this.txtLandNo.Location = new System.Drawing.Point(162, 95);
+            this.txtLandNo.Location = new System.Drawing.Point(164, 78);
             this.txtLandNo.Name = "txtLandNo";
             this.txtLandNo.Properties.AccessibleDescription = "";
             this.txtLandNo.Properties.NullValuePrompt = "Please Enter Land Number";
@@ -562,7 +559,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(499, 65);
+            this.label12.Location = new System.Drawing.Point(501, 48);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(53, 13);
             this.label12.TabIndex = 17;
@@ -571,7 +568,7 @@
             // txtMobileNo
             // 
             this.txtMobileNo.EditValue = "";
-            this.txtMobileNo.Location = new System.Drawing.Point(617, 62);
+            this.txtMobileNo.Location = new System.Drawing.Point(619, 45);
             this.txtMobileNo.Name = "txtMobileNo";
             this.txtMobileNo.Properties.AccessibleDescription = "";
             this.txtMobileNo.Properties.NullValuePrompt = "Please Enter Mobile Number";
@@ -582,7 +579,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(44, 65);
+            this.label4.Location = new System.Drawing.Point(46, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 15;
@@ -591,7 +588,7 @@
             // txtEmail
             // 
             this.txtEmail.EditValue = "";
-            this.txtEmail.Location = new System.Drawing.Point(162, 62);
+            this.txtEmail.Location = new System.Drawing.Point(164, 45);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.AccessibleDescription = "";
             this.txtEmail.Properties.NullValuePrompt = "Please Enter E-mail Address";
@@ -603,7 +600,7 @@
             // 
             this.xtraTabPage3.Controls.Add(this.simpleButton2);
             this.xtraTabPage3.Controls.Add(this.simpleButton4);
-            this.xtraTabPage3.Controls.Add(this.gridPromotion);
+            this.xtraTabPage3.Controls.Add(this.grdPromotion);
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1071, 436);
@@ -618,6 +615,7 @@
             this.simpleButton2.Size = new System.Drawing.Size(85, 39);
             this.simpleButton2.TabIndex = 17;
             this.simpleButton2.Text = "Edit";
+            this.simpleButton2.Click += new System.EventHandler(this.simpleButton2_Click);
             // 
             // simpleButton4
             // 
@@ -630,21 +628,24 @@
             this.simpleButton4.Text = "New";
             this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
-            // gridPromotion
+            // grdPromotion
             // 
-            this.gridPromotion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridPromotion.Location = new System.Drawing.Point(58, 57);
-            this.gridPromotion.MainView = this.gridView1;
-            this.gridPromotion.Name = "gridPromotion";
-            this.gridPromotion.Size = new System.Drawing.Size(830, 256);
-            this.gridPromotion.TabIndex = 0;
-            this.gridPromotion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdPromotion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdPromotion.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdPromotion.Location = new System.Drawing.Point(58, 57);
+            this.grdPromotion.MainView = this.gridView1;
+            this.grdPromotion.Name = "grdPromotion";
+            this.grdPromotion.Size = new System.Drawing.Size(974, 296);
+            this.grdPromotion.TabIndex = 0;
+            this.grdPromotion.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.gridPromotion.Click += new System.EventHandler(this.gridControl1_Click);
+            this.grdPromotion.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
-            this.gridView1.GridControl = this.gridPromotion;
+            this.gridView1.GridControl = this.grdPromotion;
             this.gridView1.Name = "gridView1";
             // 
             // xtraTabPage4
@@ -655,13 +656,13 @@
             this.xtraTabPage4.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage4.Name = "xtraTabPage4";
             this.xtraTabPage4.Size = new System.Drawing.Size(1071, 436);
-            this.xtraTabPage4.Text = "Awards";
+            this.xtraTabPage4.Text = "Employee Engagement ";
             // 
             // simpleButton3
             // 
             this.simpleButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.simpleButton3.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton3.Location = new System.Drawing.Point(181, 350);
+            this.simpleButton3.Location = new System.Drawing.Point(171, 377);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(85, 39);
             this.simpleButton3.TabIndex = 20;
@@ -671,7 +672,7 @@
             // 
             this.simpleButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.simpleButton5.Image = global::EFTesting.Properties.Resources.save;
-            this.simpleButton5.Location = new System.Drawing.Point(80, 350);
+            this.simpleButton5.Location = new System.Drawing.Point(80, 377);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(85, 39);
             this.simpleButton5.TabIndex = 19;
@@ -681,10 +682,10 @@
             // gridAward
             // 
             this.gridAward.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridAward.Location = new System.Drawing.Point(80, 48);
+            this.gridAward.Location = new System.Drawing.Point(80, 24);
             this.gridAward.MainView = this.gridView2;
             this.gridAward.Name = "gridAward";
-            this.gridAward.Size = new System.Drawing.Size(830, 256);
+            this.gridAward.Size = new System.Drawing.Size(957, 347);
             this.gridAward.TabIndex = 18;
             this.gridAward.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -697,7 +698,7 @@
             // btnClose
             // 
             this.btnClose.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnClose.Location = new System.Drawing.Point(701, 13);
+            this.btnClose.Location = new System.Drawing.Point(690, 9);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 17;
@@ -706,7 +707,7 @@
             // txtSearchBox
             // 
             this.txtSearchBox.EditValue = "";
-            this.txtSearchBox.Location = new System.Drawing.Point(410, 27);
+            this.txtSearchBox.Location = new System.Drawing.Point(399, 23);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.AccessibleDescription = "";
             this.txtSearchBox.Properties.NullValuePrompt = "Please Enter Name";
@@ -719,7 +720,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton1.Location = new System.Drawing.Point(310, 12);
+            this.simpleButton1.Location = new System.Drawing.Point(299, 8);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 15;
@@ -729,7 +730,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = global::EFTesting.Properties.Resources.update;
-            this.btnEdit.Location = new System.Drawing.Point(209, 12);
+            this.btnEdit.Location = new System.Drawing.Point(198, 8);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
             this.btnEdit.TabIndex = 13;
@@ -739,7 +740,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnAdd.Location = new System.Drawing.Point(117, 12);
+            this.btnAdd.Location = new System.Drawing.Point(106, 8);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 12;
@@ -749,7 +750,7 @@
             // btnNew
             // 
             this.btnNew.Image = global::EFTesting.Properties.Resources.save;
-            this.btnNew.Location = new System.Drawing.Point(26, 12);
+            this.btnNew.Location = new System.Drawing.Point(15, 8);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(85, 39);
             this.btnNew.TabIndex = 21;
@@ -759,10 +760,10 @@
             // grdSearch
             // 
             this.grdSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearch.Location = new System.Drawing.Point(26, 57);
+            this.grdSearch.Location = new System.Drawing.Point(12, 53);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1056, 355);
+            this.grdSearch.Size = new System.Drawing.Size(1119, 375);
             this.grdSearch.TabIndex = 22;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -891,7 +892,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMobileNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridPromotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPromotion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.xtraTabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridAward)).EndInit();
@@ -919,7 +920,7 @@
         private DevExpress.XtraEditors.SimpleButton btnEdit;
         private DevExpress.XtraEditors.SimpleButton btnAdd;
         private DevExpress.XtraEditors.SimpleButton btnNew;
-        private DevExpress.XtraGrid.GridControl gridPromotion;
+        private DevExpress.XtraGrid.GridControl grdPromotion;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.SimpleButton simpleButton2;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
@@ -975,6 +976,5 @@
         private DevExpress.XtraEditors.TextEdit textEdit5;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

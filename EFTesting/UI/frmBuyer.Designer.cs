@@ -34,7 +34,6 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new DevExpress.XtraEditors.TextEdit();
             this.txtAddress = new DevExpress.XtraEditors.MemoEdit();
@@ -124,7 +123,6 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.label6);
             this.xtraTabPage1.Controls.Add(this.label5);
             this.xtraTabPage1.Controls.Add(this.txtEmail);
             this.xtraTabPage1.Controls.Add(this.txtAddress);
@@ -139,18 +137,6 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(888, 424);
             this.xtraTabPage1.Text = "Profile ";
-            this.xtraTabPage1.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage1_Paint);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(59, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 13);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "General Information";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -284,7 +270,7 @@
             this.grdSearch.Location = new System.Drawing.Point(12, 49);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(960, 399);
+            this.grdSearch.Size = new System.Drawing.Size(960, 334);
             this.grdSearch.TabIndex = 14;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -374,6 +360,5 @@
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraEditors.SimpleButton btnDelete;
-        private System.Windows.Forms.Label label6;
     }
 }

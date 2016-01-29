@@ -23,7 +23,7 @@ namespace EFTesting.Reports
 
         public string BundleNo { get; set; }
        
-       public string PartName { get; set; }
+        public string PartName { get; set; }
 
         public string NoOfPts { get; set; }
 
@@ -31,7 +31,7 @@ namespace EFTesting.Reports
 
         public string OprationName { get; set; }
 
-      public string OprationNo2 { get; set; }
+        public string OprationNo2 { get; set; }
 
         public string OprationName2 { get; set; }
         public string OprationType { get; set; }
@@ -40,11 +40,11 @@ namespace EFTesting.Reports
 
         public string Barcode { get; set; }
 
-       public string Barcode2 { get; set; }
+        public string Barcode2 { get; set; }
 
         public string  CutNo { get; set; }
 
-       public OprationBarcodeList(){}
+        public OprationBarcodeList(){}
 
 
       public  OprationBarcodeList(
@@ -102,6 +102,7 @@ namespace EFTesting.Reports
               GenaricRepository<OprationBarcodes> _OprationBarcodesRepository = new GenaricRepository<OprationBarcodes>(new ItrackContext());
 
               var barcodes = from item in _OprationBarcodesRepository.GetAll().ToList()  where item.BundleDetails.BundleHeader.CuttingItemID == _key orderby item.OprationBarcodesID select item;
+              Debug.WriteLine(barcodes.Count());
               int i = 0 ;
               OprationBarcodeList oList = new OprationBarcodeList();
               
@@ -187,7 +188,7 @@ namespace EFTesting.Reports
                                      oList.OprationName = barcode.OparationName;
                                      oList.OprationType = barcode.OprationGrade;
                                      oList.OpRole = barcode.OprationRole;
-                                     oList.Barcode = "*" + barcode.OprationBarcodesID + "*";
+                                     oList.Barcode =  barcode.OprationBarcodesID ;
 
 
 
@@ -267,6 +268,131 @@ namespace EFTesting.Reports
               return null;
           }
       }
+
+
+
+
+      public List<OprationBarcodeList> StickerBarcodeList(int _key,int _cutId,int _from ,int _to)
+      {
+          try
+          {
+              GenaricRepository<OprationBarcodes> _OprationBarcodesRepository = new GenaricRepository<OprationBarcodes>(new ItrackContext());
+              int i = 0;
+              OprationBarcodeList oList = new OprationBarcodeList();
+              if (_key == 1)
+              {
+                  var barcodes = from item in _OprationBarcodesRepository.GetAll().ToList() where item.BundleDetails.BundleHeader.CuttingItem.CuttingItemID == _cutId orderby item.OprationBarcodesID select item;
+                  foreach (var barcode in barcodes)
+                  {
+
+                      oList.CutTicketNo = barcode.BundleDetails.BundleHeader.CuttingItem.CuttingHeaderID;
+                      oList.StyleNo = barcode.BundleDetails.BundleHeader.CuttingItem.CuttingHeader.StyleID;
+                      oList.StyleNo = barcode.BundleDetails.BundleHeader.CuttingItem.CuttingHeader.StyleID;
+                      oList.Color = barcode.BundleDetails.BundleHeader.CuttingItem.Color;
+                      oList.Size = barcode.BundleDetails.BundleHeader.CuttingItem.Size;
+                      oList.BundleNo = Convert.ToString(barcode.BundleDetails.BundleNo);
+                      oList.PartName = barcode.PartName;
+                      oList.NoOfPts = Convert.ToString(barcode.BundleDetails.NoOfItem);
+                      oList.OprationNo = Convert.ToString(barcode.OpNo);
+                      oList.OprationName = barcode.OparationName;
+                      oList.OprationType = barcode.BundleDetails.BundleHeader.CuttingItem.MarkerNo;
+                      oList.OpRole = barcode.OprationRole;
+                      oList.Barcode = barcode.OprationBarcodesID;
+                      oList.Barcode2 = "";
+                      oList.OprationNo2 = Convert.ToString(barcode.OpNo);
+                      oList.OprationName2 = barcode.OparationName;
+                      lstBarcodes.Add(new OprationBarcodeList(
+                      oList.CutTicketNo,
+                      oList.StyleNo,
+                      oList.StyleNo,
+                      oList.Color,
+                      oList.Size,
+                      oList.BundleNo,
+                      oList.PartName,
+                      oList.NoOfPts,
+                      oList.OprationNo,
+                      oList.OprationName,
+                      oList.OprationType,
+                      barcode.OprationRole,
+                 "*" + oList.Barcode + "*",
+                 "",
+                     oList.Barcode2,
+                     oList.OprationNo2,
+                     oList.OprationName2
+
+             ));
+
+
+
+                  }
+              }
+              else if (_key == 2)
+              {
+                  var barcodes = from item in _OprationBarcodesRepository.GetAll().ToList() where item.BundleDetails.BundleHeader.CuttingItem.CuttingItemID >= _from && item.BundleDetails.BundleHeader.CuttingItem.CuttingItemID <= _to orderby item.OprationBarcodesID select item;
+                  foreach (var barcode in barcodes)
+                  {
+
+                      oList.CutTicketNo = barcode.BundleDetails.BundleHeader.CuttingItem.CuttingHeaderID;
+                      oList.StyleNo = barcode.BundleDetails.BundleHeader.CuttingItem.CuttingHeader.StyleID;
+                      oList.StyleNo = barcode.BundleDetails.BundleHeader.CuttingItem.CuttingHeader.StyleID;
+                      oList.Color = barcode.BundleDetails.BundleHeader.CuttingItem.Color;
+                      oList.Size = barcode.BundleDetails.BundleHeader.CuttingItem.Size;
+                      oList.BundleNo = Convert.ToString(barcode.BundleDetails.BundleNo);
+                      oList.PartName = barcode.PartName;
+                      oList.NoOfPts = Convert.ToString(barcode.BundleDetails.NoOfItem);
+                      oList.OprationNo =Convert.ToString( barcode.OpNo);
+                      oList.OprationName = barcode.OparationName;
+                      oList.OprationType = barcode.OprationGrade;
+                      oList.OpRole = barcode.OprationRole;
+                      oList.Barcode = barcode.OprationBarcodesID;
+                      oList.Barcode2 = "";
+                      oList.OprationNo2 = Convert.ToString(barcode.OpNo); 
+                      oList.OprationName2 = barcode.OparationName;
+                      lstBarcodes.Add(new OprationBarcodeList(
+                      oList.CutTicketNo,
+                      oList.StyleNo,
+                      oList.StyleNo,
+                      oList.Color,
+                      oList.Size,
+                      oList.BundleNo,
+                      oList.PartName,
+                      oList.NoOfPts,
+                      oList.OprationNo,
+                      oList.OprationName,
+                      oList.OprationType,
+                      barcode.OprationRole,
+                 "*" + oList.Barcode + "*",
+                 "",
+                     oList.Barcode2,
+                     oList.OprationNo2,
+                     oList.OprationName2
+
+             ));
+
+
+
+                  }
+              }
+            
+              
+             
+
+             
+
+              return lstBarcodes;
+
+          }
+          catch (Exception ex)
+          {
+              Debug.WriteLine(ex.Message);
+              return null;
+          }
+
+      }
+
+
+
+
 
     }
 }

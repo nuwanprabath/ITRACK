@@ -155,10 +155,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(59, 27);
+            this.label13.Location = new System.Drawing.Point(59, 16);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(264, 13);
+            this.label13.Size = new System.Drawing.Size(224, 13);
             this.label13.TabIndex = 37;
             this.label13.Text = "General PO Infromation / Header Information";
             // 
@@ -168,7 +167,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(175, 77);
             this.grdSearchStyle.MainView = this.gridView1;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(950, 238);
+            this.grdSearchStyle.Size = new System.Drawing.Size(908, 238);
             this.grdSearchStyle.TabIndex = 35;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -391,10 +390,9 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label14.Location = new System.Drawing.Point(47, 10);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(242, 13);
+            this.label14.Size = new System.Drawing.Size(206, 13);
             this.label14.TabIndex = 40;
             this.label14.Text = "Item Ratio Breakdown /By  Size and Color";
             // 
@@ -612,7 +610,7 @@
             this.grdSearchPo.Location = new System.Drawing.Point(8, 68);
             this.grdSearchPo.MainView = this.gridView2;
             this.grdSearchPo.Name = "grdSearchPo";
-            this.grdSearchPo.Size = new System.Drawing.Size(1172, 348);
+            this.grdSearchPo.Size = new System.Drawing.Size(1172, 69);
             this.grdSearchPo.TabIndex = 45;
             this.grdSearchPo.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});

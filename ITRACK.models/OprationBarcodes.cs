@@ -10,6 +10,10 @@ namespace ITRACK.models
     {
         public string OprationBarcodesID { get; set; }
 
+        public string  LineNo { get; set; }
+
+        public string  StyleNo { get; set; }
+
         public string OprationNO { get; set; }
 
         public string  OparationName { get; set; }
@@ -28,16 +32,36 @@ namespace ITRACK.models
         public DateTime OprationComplteAt { get; set; }
 
 
-        public string  EmployeeID { get; set; }
+        public string EmployeeID { get; set; }
+
+        public virtual Employee Employee { get; set; }
        
        public int BundleDetailsID { get; set; }
        
        public virtual BundleDetails BundleDetails { get; set; }
 
+       public string OperationPoolID { get; set; }
+
+       public virtual OperationPool OperationPool { get; set; }
+
+       public string HourNo { get; set; }
+
+       public int WorkstationNo { get; set; }
+
+
+       public int OpNo { get; set; }
+
+
+
+
+     
+
        public OprationBarcodes() { }
 
-       public OprationBarcodes (string _OprationBarcodesID,string _OprationNO, string _OparationName, string _OprationGrade, string _OprationRole, string _PartName, bool _isOparationComplete,DateTime _OprationComplteAt,string _EmployeeID, int _BundleDetailsID){
+       public OprationBarcodes (string _OprationBarcodesID,string _LineNo,string _StyleNo, string _OprationNO, string _OparationName, string _OprationGrade, string _OprationRole, string _PartName, bool _isOparationComplete,DateTime _OprationComplteAt,string _EmployeeID, int _BundleDetailsID,string _oprationPoolID,string _hourNo,int _workstationNo,int _OpNo){
            this.OprationBarcodesID = _OprationBarcodesID;
+           this.LineNo = _LineNo;
+           this.StyleNo = _StyleNo;
            this.OprationNO = _OprationNO;
            this.OparationName = _OparationName;
            this.OprationGrade = _OprationGrade;
@@ -47,6 +71,11 @@ namespace ITRACK.models
            this.OprationComplteAt = _OprationComplteAt;
            this.EmployeeID = _EmployeeID;
            this.BundleDetailsID = _BundleDetailsID;
+           this.OperationPoolID = _oprationPoolID;
+           this.WorkstationNo = _workstationNo;
+           this.HourNo = _hourNo;
+           this.OpNo = _OpNo;
+           
 
    }
 

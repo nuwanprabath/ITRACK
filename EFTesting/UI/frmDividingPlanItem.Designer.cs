@@ -46,6 +46,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.grdOpList = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtWno = new DevExpress.XtraEditors.TextEdit();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtOpNo = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.txtOprationNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtoprationName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbSmvType.Properties)).BeginInit();
@@ -54,6 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWno.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOpNo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -121,7 +127,7 @@
             // btnEdit
             // 
             this.btnEdit.Image = global::EFTesting.Properties.Resources.update;
-            this.btnEdit.Location = new System.Drawing.Point(330, 184);
+            this.btnEdit.Location = new System.Drawing.Point(330, 226);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(85, 39);
             this.btnEdit.TabIndex = 9;
@@ -131,7 +137,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnAdd.Location = new System.Drawing.Point(148, 184);
+            this.btnAdd.Location = new System.Drawing.Point(148, 226);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 7;
@@ -181,7 +187,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.save1;
-            this.simpleButton1.Location = new System.Drawing.Point(239, 184);
+            this.simpleButton1.Location = new System.Drawing.Point(239, 226);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 8;
@@ -211,20 +217,19 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(30, 38);
+            this.label8.Location = new System.Drawing.Point(30, 25);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(213, 13);
+            this.label8.Size = new System.Drawing.Size(183, 13);
             this.label8.TabIndex = 57;
             this.label8.Text = "Add / Edit Operation To Dividing Plan";
             // 
             // grdOpList
             // 
             this.grdOpList.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdOpList.Location = new System.Drawing.Point(148, 93);
+            this.grdOpList.Location = new System.Drawing.Point(33, 93);
             this.grdOpList.MainView = this.gridView2;
             this.grdOpList.Name = "grdOpList";
-            this.grdOpList.Size = new System.Drawing.Size(788, 196);
+            this.grdOpList.Size = new System.Drawing.Size(979, 248);
             this.grdOpList.TabIndex = 58;
             this.grdOpList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -235,12 +240,55 @@
             this.gridView2.GridControl = this.grdOpList;
             this.gridView2.Name = "gridView2";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(30, 182);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(34, 13);
+            this.label7.TabIndex = 60;
+            this.label7.Text = "W/No";
+            // 
+            // txtWno
+            // 
+            this.txtWno.EditValue = "";
+            this.txtWno.Location = new System.Drawing.Point(148, 179);
+            this.txtWno.Name = "txtWno";
+            this.txtWno.Properties.AccessibleDescription = "";
+            this.txtWno.Properties.NullValuePrompt = "Please Enter SMV Type";
+            this.txtWno.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtWno.Size = new System.Drawing.Size(251, 20);
+            this.txtWno.TabIndex = 59;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(446, 182);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(38, 13);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "OP/No";
+            // 
+            // txtOpNo
+            // 
+            this.txtOpNo.EditValue = "";
+            this.txtOpNo.Location = new System.Drawing.Point(564, 179);
+            this.txtOpNo.Name = "txtOpNo";
+            this.txtOpNo.Properties.AccessibleDescription = "";
+            this.txtOpNo.Properties.NullValuePrompt = "Please Enter SMV Type";
+            this.txtOpNo.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtOpNo.Size = new System.Drawing.Size(251, 20);
+            this.txtOpNo.TabIndex = 61;
+            // 
             // frmDividingPlanItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(948, 352);
+            this.ClientSize = new System.Drawing.Size(1045, 390);
             this.Controls.Add(this.grdOpList);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtOpNo);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPartName);
@@ -257,6 +305,7 @@
             this.Controls.Add(this.txtoprationName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOprationNo);
+            this.Controls.Add(this.txtWno);
             this.Name = "frmDividingPlanItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Dividing Plan Item";
@@ -269,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPartName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdOpList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtWno.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOpNo.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +345,9 @@
         private System.Windows.Forms.Label label8;
         private DevExpress.XtraGrid.GridControl grdOpList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Label label7;
+        private DevExpress.XtraEditors.TextEdit txtWno;
+        private System.Windows.Forms.Label label9;
+        private DevExpress.XtraEditors.TextEdit txtOpNo;
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grdSearch = new DevExpress.XtraGrid.GridControl();
+            this.grdSizeList = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSize = new DevExpress.XtraEditors.TextEdit();
@@ -37,32 +37,35 @@
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdSizeList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).BeginInit();
             this.SuspendLayout();
             // 
-            // grdSearch
+            // grdSizeList
             // 
-            this.grdSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdSearch.Location = new System.Drawing.Point(26, 12);
-            this.grdSearch.MainView = this.gridView3;
-            this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(685, 262);
-            this.grdSearch.TabIndex = 63;
-            this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdSizeList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdSizeList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdSizeList.Location = new System.Drawing.Point(26, 12);
+            this.grdSizeList.MainView = this.gridView3;
+            this.grdSizeList.Name = "grdSizeList";
+            this.grdSizeList.Size = new System.Drawing.Size(771, 401);
+            this.grdSizeList.TabIndex = 63;
+            this.grdSizeList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
             // 
             // gridView3
             // 
-            this.gridView3.GridControl = this.grdSearch;
+            this.gridView3.GridControl = this.grdSizeList;
             this.gridView3.Name = "gridView3";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(28, 286);
+            this.label10.Location = new System.Drawing.Point(28, 429);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(26, 13);
             this.label10.TabIndex = 65;
@@ -71,7 +74,7 @@
             // txtSize
             // 
             this.txtSize.EditValue = "";
-            this.txtSize.Location = new System.Drawing.Point(26, 302);
+            this.txtSize.Location = new System.Drawing.Point(26, 445);
             this.txtSize.Name = "txtSize";
             this.txtSize.Properties.AccessibleDescription = "";
             this.txtSize.Properties.NullValuePrompt = "Size";
@@ -82,7 +85,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 286);
+            this.label1.Location = new System.Drawing.Point(242, 429);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(25, 13);
             this.label1.TabIndex = 67;
@@ -91,7 +94,7 @@
             // txtQty
             // 
             this.txtQty.EditValue = "";
-            this.txtQty.Location = new System.Drawing.Point(240, 302);
+            this.txtQty.Location = new System.Drawing.Point(240, 445);
             this.txtQty.Name = "txtQty";
             this.txtQty.Properties.AccessibleDescription = "";
             this.txtQty.Properties.NullValuePrompt = "Qty";
@@ -101,7 +104,7 @@
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(616, 299);
+            this.simpleButton4.Location = new System.Drawing.Point(616, 442);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 70;
@@ -109,7 +112,7 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(535, 299);
+            this.simpleButton3.Location = new System.Drawing.Point(535, 442);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(75, 23);
             this.simpleButton3.TabIndex = 69;
@@ -117,7 +120,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(454, 299);
+            this.simpleButton2.Location = new System.Drawing.Point(454, 442);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 68;
@@ -128,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 342);
+            this.ClientSize = new System.Drawing.Size(826, 488);
             this.Controls.Add(this.simpleButton4);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.simpleButton2);
@@ -136,10 +139,10 @@
             this.Controls.Add(this.txtQty);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtSize);
-            this.Controls.Add(this.grdSearch);
+            this.Controls.Add(this.grdSizeList);
             this.Name = "dlgSizelist";
-            this.Text = "dlgSizelist";
-            ((System.ComponentModel.ISupportInitialize)(this.grdSearch)).EndInit();
+            this.Text = "Size List";
+            ((System.ComponentModel.ISupportInitialize)(this.grdSizeList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtQty.Properties)).EndInit();
@@ -150,7 +153,7 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl grdSearch;
+        private DevExpress.XtraGrid.GridControl grdSizeList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
         private System.Windows.Forms.Label label10;
         private DevExpress.XtraEditors.TextEdit txtSize;

@@ -16,6 +16,11 @@ using Excel = Microsoft.Office.Interop.Excel;
 using MyTeamApp;
 using DevExpress.XtraEditors.Controls;
 using ITRACK.Validator;
+using EFTesting.Reports;
+using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.UI.PivotGrid;
+using DevExpress.XtraPivotGrid;
+using EFTesting.ViewModel;
 
 
 namespace EFTesting.UI
@@ -62,6 +67,7 @@ namespace EFTesting.UI
         CuttingItem AssignCuttingItem() {
             try {
                 CuttingItem _cuttingItem = new CuttingItem();
+                _cuttingItem.PoNo = txtPoNo.Text;
                 _cuttingItem.CuttingHeaderID = _cuttingHeader.CuttingHeaderID;
                 _cuttingItem.MarkerNo = txtMarkerNo.Text;
                 _cuttingItem.Color = txtColorCode.Text;
@@ -69,11 +75,9 @@ namespace EFTesting.UI
                 _cuttingItem.Length = txtLength.Text;
                 _cuttingItem.NoOfItem =Convert.ToInt16( txtnoOfItem.Text);
                 _cuttingItem.NoOfLayer =Convert.ToInt16( txtnoOfLayers.Text);
-                _cuttingItem.NoOfPlysPlaned = Convert.ToInt16(txtnoOfplysPlan.Text);
-                _cuttingItem.NoOfPlysLayed = Convert.ToInt16(txtnoOfplysLayed.Text);
+              
                 _cuttingItem.FabricType = txtfabricType.Text;
-                _cuttingItem.MarkerLenth =Convert.ToDouble( txtmarkerLenth.Text);
-                _cuttingItem.MarkerWidth = Convert.ToDouble(txtmarkerWidth.Text);
+             
                 _cuttingItem.LineNo = txtlineNo.Text;
                 _cuttingItem.Date = Convert.ToDateTime(DateTime.Now.ToShortDateString());
                 _cuttingItem.isGenaratedTags = false;
@@ -343,7 +347,12 @@ namespace EFTesting.UI
 
         private void FeedCuttingItem(string _headerId) {
             try {
-                grdItemList.DataSource = GetCuttingItemByID(_headerId);
+               // grdItemList.DataSource = GetCuttingItemByID(_headerId);
+
+                var selectedColumn = from item in GetCuttingItemByID(_headerId)
+                                     select
+                                     new {item.CuttingItemID,item.Date, item.PoNo,item.MarkerNo,item.LineNo,item.FabricType,item.Color,item.Size,item.Length,item.NoOfLayer,item.NoOfItem };
+                grdItemList.DataSource = selectedColumn;
                 gridView1.Columns["CuttingHeader"].Visible = false;
                 gridView1.Columns["CuttingHeaderID"].Visible = false;
                 gridView1.Columns["BundleHeader"].Visible = false;
@@ -418,14 +427,11 @@ namespace EFTesting.UI
                 txtMarkerNo.Text = gridView1.GetFocusedRowCellValue("MarkerNo").ToString();
                 txtfabricType.Text = gridView1.GetFocusedRowCellValue("FabricType").ToString();
                 txtColorCode.Text = gridView1.GetFocusedRowCellValue("Color").ToString();
-                txtmarkerLenth.Text = gridView1.GetFocusedRowCellValue("MarkerLenth").ToString();
-                txtmarkerWidth.Text = gridView1.GetFocusedRowCellValue("MarkerWidth").ToString();
                 txtSize.Text = gridView1.GetFocusedRowCellValue("Size").ToString();
                 txtLength.Text = gridView1.GetFocusedRowCellValue("Length").ToString();
                 txtnoOfItem.Text = gridView1.GetFocusedRowCellValue("NoOfItem").ToString();
                 txtnoOfLayers.Text = gridView1.GetFocusedRowCellValue("NoOfLayer").ToString();
-                txtnoOfplysPlan.Text = gridView1.GetFocusedRowCellValue("NoOfPlysPlaned").ToString();
-                txtnoOfplysLayed.Text = gridView1.GetFocusedRowCellValue("NoOfPlysLayed").ToString();
+               
                 this.CItem =Convert.ToInt16( gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
                 _cuttingItem.CuttingHeaderID = txtCuttingTicketNo.Text;
             }
@@ -452,6 +458,103 @@ namespace EFTesting.UI
 
         }
 
+        LayinDetails fDetails = new LayinDetails();
+        private LayinDetails AssignFabricDetails() {
+
+            try {
+                fDetails.StyleID = txtStyleNo.Text;
+                fDetails.MarkerNo = txtMNo.Text;
+                fDetails.Date =Convert.ToDateTime(DateTime.Now.ToShortDateString());
+                fDetails.FabricRollID = txtRoleNo.Text;
+                fDetails.LayerLenth =Convert.ToDouble( txtRollWidth.Text);
+                fDetails.FabricRollLenth =Convert.ToDouble( txtRollHegiht.Text);
+                fDetails.NoofPlys =Convert.ToInt16( txtNoOfPlys.Text);
+                fDetails.Rest =Convert.ToDouble( txtRest.Text);
+                fDetails.FabricUsed =Convert.ToDouble( txtFabused.Text);
+                fDetails.TotalPcs =Convert.ToInt16( txtTotalPcs.Text);
+
+                return fDetails;
+            }
+            catch(Exception ex)
+            {
+
+                Debug.WriteLine(ex.Message); 
+                return null;
+
+            }
+        
+        
+        }
+
+
+        private void AddLayerDetails() {
+            try {
+                GenaricRepository<LayinDetails> _LayinDetailsRepo = new GenaricRepository<LayinDetails>(new ItrackContext());
+                _LayinDetailsRepo.Add(AssignFabricDetails());
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        
+        }
+
+
+
+        void feedCombo() {
+            try { 
+                
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            
+            }
+        }
+
+        void FeedLayinDetails(string _styleNo) {
+            try {
+
+                GenaricRepository<LayinDetails> _LayinDetailsRepo = new GenaricRepository<LayinDetails>(new ItrackContext());
+
+              grdFabricDetails.DataSource =   _LayinDetailsRepo.GetAll().ToList().Where(x=>x.StyleID == _styleNo );
+              gridView4.Columns["Style"].Visible = false;
+            
+            }
+            catch(Exception ex){
+
+                Debug.WriteLine(ex.Message);
+            
+            }
+        
+        }
+
+
+        private void EditLayerDetails()
+        {
+            try
+            {
+                GenaricRepository<LayinDetails> _LayinDetailsRepo = new GenaricRepository<LayinDetails>(new ItrackContext());
+                _LayinDetailsRepo.Add(AssignFabricDetails());
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
+
+        }
+
+        private void SetLayingDetails(string StyleNo) {
+            try {
+                GenaricRepository<LayinDetails> _LayinDetailsRepo = new GenaricRepository<LayinDetails>(new ItrackContext());
+                grdFabricDetails.DataSource = _LayinDetailsRepo.GetAll().ToList().Where(x => x.StyleID == StyleNo);
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        
+        }
+
+
+
         #endregion
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -464,8 +567,9 @@ namespace EFTesting.UI
 
         private void txtSearchBox_EditValueChanged(object sender, EventArgs e)
         {
+            splashScreenManager1.ShowWaitForm();
             SearchCuttingHeader();
-
+            splashScreenManager1.CloseWaitForm();
         }
 
         private void txtSearchBox_KeyDown(object sender, KeyEventArgs e)
@@ -560,26 +664,6 @@ namespace EFTesting.UI
             }
 
 
-            if (!validate.isPresent(txtnoOfplysPlan, "No Of Plys Plan"))
-            {
-                return false;
-            }
-
-            if (!validate.isPresent(txtnoOfplysLayed, "No Of Plys Layed"))
-            {
-                return false;
-            }
-
-            if (!validate.isPresent(txtmarkerLenth, "Marker Length"))
-            {
-                return false;
-            }
-
-            if (!validate.isPresent(txtmarkerWidth, "Marker Width"))
-            {
-                return false;
-            }
-
             if (!validate.isPresent(txtSize, "Size"))
             {
                 return false;
@@ -592,6 +676,54 @@ namespace EFTesting.UI
 
             return true;
         }
+
+
+
+        public bool isValidLayer()
+        {
+            if (!validate.isPresent(txtRoleNo, "Fabric Roll ID"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtRollWidth, "Fabric Roll Width"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtRollHegiht, "Fabric Roll Length"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtNoOfPlys, "No Of Plys"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtRest, "Rest"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtFabused, "Fabric Used"))
+            {
+                return false;
+            }
+
+            if (!validate.isPresent(txtTotalPcs, "Total PCS"))
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+
+
+
+
+
 
         #endregion
 
@@ -606,6 +738,7 @@ namespace EFTesting.UI
                 FeedCuttingItem(_cuttingHeader.CuttingHeaderID);
                 FeedConmbo(txtSize);
                 FeedColorCombo(txtColorCode);
+                FeedLayinDetails(txtStyleNo.Text);
                 grdSearch.Hide();
                 txtSearchBox.Hide();
                 btnClose.Hide();
@@ -630,21 +763,21 @@ namespace EFTesting.UI
         private void simpleButton5_Click(object sender, EventArgs e)
         {
 
-
-
-            OpenFileDialog ExcelDialog = new OpenFileDialog();
-            ExcelDialog.Filter = "Excel Files (*.xlsx) | *.xlsx";
-            ExcelDialog.InitialDirectory = @"C:\";
-            ExcelDialog.Title = "Select your team excel";
-            if (ExcelDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            if (isValidLayer() == true)
             {
-               
-             
+                if (isExistingItem(txtMNo.Text) == true)
+                {
+                    AddLayerDetails();
+                    FeedLayinDetails(txtStyleNo.Text);
+                }
+                else
+                {
+                     MessageBox.Show("Please Check Marker No", "Error - B-0003", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+           
             }
-
-
-
-
+            
+           
 
                  
         }
@@ -735,6 +868,11 @@ namespace EFTesting.UI
         
         }
 
+
+
+
+   
+
       GenaricRepository<Style> _Stylerepository = new GenaricRepository<Style>(new ItrackContext());
       private List<Style> GetStyleByID(string ID)
       {
@@ -773,6 +911,156 @@ namespace EFTesting.UI
       }
 
 
+
+      private bool isExistingItem( string _markerNo) {
+          try {
+              GenaricRepository<CuttingItem> _CutItemrepo = new GenaricRepository<CuttingItem>(new ItrackContext());
+              if (_CutItemrepo.GetAll().Where(x => x.MarkerNo == _markerNo).ToList().Count() > 0)
+              {
+                  return true;
+              }
+              else {
+                  return false;
+              }
+          }
+          catch(Exception ex){
+             
+              Debug.WriteLine(ex.Message);
+              return false;
+          }
+      
+      }
+
+      private List<CuttingItem> GetCuttingDetailsReport( string _styleNo) {
+
+          try 
+          {
+              GenaricRepository<CuttingItem> _CuttingItemRepo = new GenaricRepository<CuttingItem>(new ItrackContext());
+              return _CuttingItemRepo.GetAll().Where(x=>x.CuttingHeader.StyleID == _styleNo ).ToList();
+          }
+          catch(Exception ex)
+          {
+              Debug.WriteLine(ex.Message);
+              return null;
+          }
+      
+      }
+
+
+      private List<LayinDetails> GetLayinDetailsReport(string _styleNo)
+      {
+
+          try
+          {
+              GenaricRepository<LayinDetails> _CuttingItemRepo = new GenaricRepository<LayinDetails>(new ItrackContext());
+              return _CuttingItemRepo.GetAll().Where(x => x.StyleID == _styleNo).ToList();
+          }
+          catch (Exception ex)
+          {
+              Debug.WriteLine(ex.Message);
+              return null;
+          }
+
+      }
+
+
+      private List<CutReport> GetList() {
+          GenaricRepository<CuttingItem> _CuttingItemRepo = new GenaricRepository<CuttingItem>(new ItrackContext());
+          List<CutReport> lst = new List<CutReport>();
+          foreach (var item in _CuttingItemRepo.GetAll().ToList().Where(x=>x.CuttingHeader.StyleID==txtStyleNo.Text)) {
+              lst.Add(new CutReport {StyleNo=item.CuttingHeader.StyleID, Date= item.Date,LineNo = item.LineNo,Color=item.Color,Size=item.Size,Pcs=item.NoOfItem});
+          }
+          return lst;
+      }
+
+
+      private XtraReport CreateReport()
+      {
+          // Create a blank report.
+          XtraReport crossTabReport = new XtraReport();
+
+          // Create a detail band and add it to the report.
+          DetailBand detail = new DetailBand();
+          crossTabReport.Bands.Add(detail);
+
+          // Create a pivot grid and add it to the Detail band.
+          XRPivotGrid pivotGrid = new XRPivotGrid();
+          detail.Controls.Add(pivotGrid);
+
+          //// Create a data connection.
+          //OleDbConnection connection = new
+          //OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\nwind.mdb");
+
+          //// Create a data adapter.
+          //OleDbDataAdapter adapter = new OleDbDataAdapter(
+          //"SELECT CategoryName, ProductName, Country, [Sales Person], Quantity, [Extended Price] FROM SalesPerson",
+          //connection);
+
+          //// Creata and populate a dataset.
+          //DataSet dataSet1 = new DataSet();
+          //adapter.Fill(dataSet1, "SalesPerson");
+
+          // Bind the pivot grid to data.
+          pivotGrid.DataSource = GetList();
+        //  pivotGrid.DataMember = "SalesPerson";
+
+          // Generate pivot grid's fields.
+         
+          XRPivotGridField fieldProductName = new XRPivotGridField("LineNo", PivotArea.RowArea);
+          XRPivotGridField fieldDate = new XRPivotGridField("Date", PivotArea.RowArea);
+          XRPivotGridField fieldCountry = new XRPivotGridField("Size", PivotArea.ColumnArea);
+         
+          XRPivotGridField fieldQuantity = new XRPivotGridField("Pcs", PivotArea.DataArea);
+          fieldDate.ValueFormat.FormatString = "d";
+
+          // Add these fields to the pivot grid.
+          pivotGrid.Fields.AddRange(new XRPivotGridField[] {fieldDate, fieldProductName, fieldCountry,
+         fieldQuantity});
+
+          return crossTabReport;
+      }
+
+
+
+
+      private void GetCuttingDetailsReport() {
+          try {
+           //   rptCuttingDetails report = new rptCuttingDetails();
+            //  report.DataSource = GetCuttingDetailsReport(txtStyleNo.Text);
+
+             rptCutS report = new rptCutS();
+             report.DataSource = GetList();
+             report.Landscape = true;
+             ReportPrintTool tool = new ReportPrintTool(report);
+            tool.ShowPreview();
+          }
+          catch(Exception ex){
+              Debug.WriteLine(ex.Message);
+          }
+      
+      }
+
+
+      private void GetFabricDetailsReport()
+      {
+          try
+          {
+              MatirialDetails report = new MatirialDetails();
+              report.DataSource = GetLayinDetailsReport(txtStyleNo.Text);
+
+              ReportPrintTool tool = new ReportPrintTool(report);
+              tool.ShowPreview();
+          }
+          catch (Exception ex)
+          {
+              Debug.WriteLine(ex.Message);
+          }
+
+      }
+
+
+
+
         private void simpleButton4_Click(object sender, EventArgs e)
         {
             _cuttingItem.CuttingItemID = Convert.ToInt16(gridView1.GetFocusedRowCellValue("CuttingItemID").ToString());
@@ -801,9 +1089,36 @@ namespace EFTesting.UI
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void xtraTabPage3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void simpleButton3_Click_1(object sender, EventArgs e)
+        {
+           // GetCuttingDetailsReport();
+            // Create a cross-tab report.
+         // XtraReport report = CreateReport();
+
+            // Show its Print Preview.
+            // report.ShowPreview();
+            GetCuttingDetailsReport();
+
+
+          
+
+        }
+
+        private void simpleButton5_Click_1(object sender, EventArgs e)
+        {
+            GetFabricDetailsReport();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            grdSearch.Hide();
+            txtSearchBox.Hide();
+            btnClose.Hide();
         }
     }
 }

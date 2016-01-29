@@ -58,7 +58,6 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -167,7 +166,6 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.label3);
             this.xtraTabPage1.Controls.Add(this.label1);
             this.xtraTabPage1.Controls.Add(this.txtStyleNo);
             this.xtraTabPage1.Controls.Add(this.imgprofile);
@@ -379,7 +377,7 @@
             this.grdSearch.Location = new System.Drawing.Point(19, 59);
             this.grdSearch.MainView = this.gridView1;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1048, 346);
+            this.grdSearch.Size = new System.Drawing.Size(1048, 27);
             this.grdSearch.TabIndex = 44;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -389,16 +387,6 @@
             // 
             this.gridView1.GridControl = this.grdSearch;
             this.gridView1.Name = "gridView1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(48, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(164, 13);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "Sketch General Information";
             // 
             // frmSketchMaster
             // 
@@ -479,6 +467,5 @@
         private DevExpress.XtraEditors.TextEdit txtStyleNo;
         private DevExpress.XtraGrid.GridControl grdSearch;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private System.Windows.Forms.Label label3;
     }
 }

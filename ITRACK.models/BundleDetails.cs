@@ -10,6 +10,8 @@ namespace ITRACK.models
     {
         public int BundleDetailsID { get; set; }
 
+        public int BundleNo { get; set; }
+
         public string SerailNo { get; set; }
 
         public Int64 NoOfItem { get; set; }

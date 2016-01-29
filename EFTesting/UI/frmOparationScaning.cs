@@ -12,6 +12,7 @@ using System.Diagnostics;
 using ITRACK.models;
 using System.IO;
 using ITRACK.Validator;
+using EFTesting.ViewModel;
 
 namespace EFTesting.UI
 {
@@ -41,7 +42,7 @@ namespace EFTesting.UI
 
         private void scaning(string barcode) {
 
-            if (barcode.Length > 6 && barcode.Length == 14)
+            if (barcode.Length == 6 || barcode.Length == 14)
             {
                 if (txtEmployeeID.Text != "")
                 {
@@ -143,6 +144,38 @@ namespace EFTesting.UI
             }
         }
 
+        Employee _employee = new Employee();
+        private void offlineScaning(string _barcode) {
+            try { 
+                GenaricRepository<OprationBarcodes> _BarcodeRepository = new GenaricRepository<OprationBarcodes>(new ItrackContext());
+                GenaricRepository<OprationBarcodes> _BarcodeEditRepository = new GenaricRepository<OprationBarcodes>(new ItrackContext());
+                foreach (var barcode in _BarcodeRepository.GetAll().Where(p => p.OprationBarcodesID == _barcode).ToList())
+                {
+                     OprationBarcodes _sbarcode = new OprationBarcodes();
+                    _sbarcode.OprationComplteAt =Convert.ToDateTime(txtDate.Text + " " +txtTime.Text);
+                    _sbarcode.isOparationComplete = true;
+                    _sbarcode.EmployeeID = _employee.EmployeeID;
+                    _sbarcode.OprationBarcodesID = this.BarcodeID;
+                    _sbarcode.OprationNO = barcode.OprationNO; ;
+                    _sbarcode.OparationName = barcode.OparationName;
+                    _sbarcode.OprationGrade = barcode.OprationGrade;
+                    _sbarcode.OprationRole = barcode.OprationRole;
+                    _sbarcode.BundleDetailsID = barcode.BundleDetails.BundleDetailsID;
+                    _sbarcode.PartName = barcode.PartName;
+                    _sbarcode.LineNo = barcode.LineNo;
+                    _sbarcode.StyleNo = barcode.StyleNo;
+                    _sbarcode.OprationBarcodesID = _barcode;
+                    _sbarcode.OperationPoolID = barcode.OprationNO;
+                    _BarcodeEditRepository.Update(_sbarcode);
+                
+                }
+            }
+            catch(Exception ex){
+                Debug.WriteLine(ex.Message);
+            }
+        
+        }
+
         #endregion
 
 
@@ -162,7 +195,80 @@ namespace EFTesting.UI
 
         }
 
-        private void frmOparationScaning_Load(object sender, EventArgs e)
+
+        private bool WriteLogToTextFile(string[] _log) {
+
+            try
+            {
+
+                System.IO.File.WriteAllLines(@"\log.txt", _log);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                
+                Debug.WriteLine(ex.Message);
+                return false;
+            }
+        
+        }
+
+
+
+        private bool ProcessTextFile() {
+            
+               // textfileOpen.Filter = "Text Files (*.txt) | *.doc";
+                textfileOpen.InitialDirectory = @"C:\";
+                textfileOpen.Title = "Select Text File To Process";
+                TextFileReadingHelper _helper = new TextFileReadingHelper();
+                if (textfileOpen.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+
+
+                    string _path = textfileOpen.FileName;
+                    foreach (var Line in _helper.getAllLines(_path)) {
+
+                        if (Line.Length == 5)
+                        {
+                            GenaricRepository<Employee> _EmployeeRepos = new GenaricRepository<Employee>(new ItrackContext());
+                            var emplist = _EmployeeRepos.GetAll().Where(x=>x.EmployeeID == Line);
+                            if (emplist.Count() > 0)
+                            {
+                                _employee.EmployeeID = Line;
+
+                            }
+                            else {
+
+                                Debug.WriteLine("Error :" + _employee.EmployeeID);
+                            
+                            }
+                         
+                            Debug.WriteLine("EMployee ID :" + Line);
+                        }
+                        else if (Line.Length == 6) 
+                        {
+
+                            offlineScaning(Line);
+                            Debug.WriteLine(Line);
+                        }
+                    
+                }
+
+                
+
+
+            }
+
+            return true;
+        
+        }
+
+        private void simpleButton4_Click(object sender, EventArgs e)
+        {
+            ProcessTextFile();
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
         {
 
         }

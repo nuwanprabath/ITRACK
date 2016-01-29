@@ -10,6 +10,8 @@ namespace ITRACK.models
     {
         public int CuttingItemID { get; set; }
 
+        public string PoNo { get; set; }
+     
         public string MarkerNo { get; set; }
 
         public string  FabricType { get; set; }

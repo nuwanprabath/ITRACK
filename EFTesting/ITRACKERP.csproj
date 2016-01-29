@@ -11,6 +11,7 @@
     <AssemblyName>EFTesting</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -21,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +32,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -53,14 +56,17 @@
     <Reference Include="DevExpress.XtraGauges.v14.1.Core, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v14.1.Extensions, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Excel">
       <HintPath>C:\Users\HP\Desktop\Excel\Excel.dll</HintPath>
@@ -71,6 +77,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -84,26 +91,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDbContext.cs" />
     <Compile Include="CompanyVM.cs" />
+    <Compile Include="Reports\ConnectionSettings\ConnectionDetails.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201601290735099_StockLedger.cs" />
-    <Compile Include="Migrations\201601290735099_StockLedger.Designer.cs">
-      <DependentUpon>201601290735099_StockLedger.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\BarcodeLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BarcodeLabel.Designer.cs">
+      <DependentUpon>BarcodeLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\clsProductionSummary.cs" />
+    <Compile Include="Reports\dailyProductionByHour.cs" />
     <Compile Include="Reports\Dataset\BundleTicket.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BundleTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Dataset\dsetCutReport.cs">
+      <DependentUpon>dsetCutReport.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Dataset\dsetCutReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsetCutReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\HourlyIndividualProduction.cs" />
+    <Compile Include="Reports\HourlyProduction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\HourlyProduction.Designer.cs">
+      <DependentUpon>HourlyProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\HourlyProductionByOperation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\HourlyProductionByOperation.Designer.cs">
+      <DependentUpon>HourlyProductionByOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MatirialDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MatirialDetails.Designer.cs">
+      <DependentUpon>MatirialDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\OprationBarcodeList.cs" />
     <Compile Include="Reports\Report\RptbundleTicket.cs">
@@ -112,19 +149,85 @@
       <DependentUpon>RptbundleTicket.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\Stock Report\rtGRN.cs">
+    <Compile Include="Reports\Report\sBundleTicket.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sBundleTicket.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\Stock Report\rtGRN.Designer.cs">
-      <DependentUpon>rtGRN.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\Stock Report\rtPO.cs">
+    <Compile Include="Reports\rptBarcodeList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\Stock Report\rtPO.Designer.cs">
-      <DependentUpon>rtPO.cs</DependentUpon>
+    <Compile Include="Reports\rptBarcodeList.Designer.cs">
+      <DependentUpon>rptBarcodeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptCutS.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCutS.Designer.cs">
+      <DependentUpon>rptCutS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptCuttingDetails.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCuttingDetails.Designer.cs">
+      <DependentUpon>rptCuttingDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptDayend.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDayend.Designer.cs">
+      <DependentUpon>rptDayend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptDividingPlan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDividingPlan.Designer.cs">
+      <DependentUpon>rptDividingPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptHProduction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptHProduction.Designer.cs">
+      <DependentUpon>rptHProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptPoDiliveries.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPoDiliveries.Designer.cs">
+      <DependentUpon>rptPoDiliveries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptTICKET.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptTICKET.Designer.cs">
+      <DependentUpon>rptTICKET.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptDailiyProByHour.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptDailiyProByHour.Designer.cs">
+      <DependentUpon>rptDailiyProByHour.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\BundleWiseProduction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\BundleWiseProduction.Designer.cs">
+      <DependentUpon>BundleWiseProduction.cs</DependentUpon>
     </Compile>
     <Compile Include="StyleVM.cs" />
+    <Compile Include="UI\dailyProductionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\dailyProductionDialog.Designer.cs">
+      <DependentUpon>dailyProductionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\dlgBundleSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\dlgBundleSelect.Designer.cs">
+      <DependentUpon>dlgBundleSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\dlgdividingplan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +251,12 @@
     </Compile>
     <Compile Include="UI\frmAward.Designer.cs">
       <DependentUpon>frmAward.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmBundlePrintoption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmBundlePrintoption.Designer.cs">
+      <DependentUpon>frmBundlePrintoption.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmBundlingMaster.cs">
       <SubType>Form</SubType>
@@ -173,17 +282,17 @@
     <Compile Include="UI\frmcompanyDialog.Designer.cs">
       <DependentUpon>frmcompanyDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmCustomFieldsSetup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\frmCustomFieldsSetup.Designer.cs">
-      <DependentUpon>frmCustomFieldsSetup.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\frmCuttingMaster.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmCuttingMaster.Designer.cs">
       <DependentUpon>frmCuttingMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmDayend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmDayend.Designer.cs">
+      <DependentUpon>frmDayend.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmDividingPlan.cs">
       <SubType>Form</SubType>
@@ -197,17 +306,35 @@
     <Compile Include="UI\frmDividingPlanItem.Designer.cs">
       <DependentUpon>frmDividingPlanItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmGRN.cs">
+    <Compile Include="UI\frmHourlyProductionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmGRN.Designer.cs">
-      <DependentUpon>frmGRN.cs</DependentUpon>
+    <Compile Include="UI\frmHourlyProductionDialog.Designer.cs">
+      <DependentUpon>frmHourlyProductionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmHourlyProductionOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmHourlyProductionOut.Designer.cs">
+      <DependentUpon>frmHourlyProductionOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmIndividualProductionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmIndividualProductionDialog.Designer.cs">
+      <DependentUpon>frmIndividualProductionDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmOfflineScaning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmOfflineScaning.Designer.cs">
+      <DependentUpon>frmOfflineScaning.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmOparationScaning.cs">
       <SubType>Form</SubType>
@@ -227,11 +354,11 @@
     <Compile Include="UI\frmParts.Designer.cs">
       <DependentUpon>frmParts.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmPo.cs">
+    <Compile Include="UI\frmPoDeliveriesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmPo.Designer.cs">
-      <DependentUpon>frmPo.cs</DependentUpon>
+    <Compile Include="UI\frmPoDeliveriesDialog.Designer.cs">
+      <DependentUpon>frmPoDeliveriesDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmPrintBarcode.cs">
       <SubType>Form</SubType>
@@ -251,11 +378,11 @@
     <Compile Include="UI\frmPurchaseOrder.Designer.cs">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmRunningNo.cs">
+    <Compile Include="UI\frmScaningTimeScadual.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmRunningNo.Designer.cs">
-      <DependentUpon>frmRunningNo.cs</DependentUpon>
+    <Compile Include="UI\frmScaningTimeScadual.Designer.cs">
+      <DependentUpon>frmScaningTimeScadual.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmSketchMaster.cs">
       <SubType>Form</SubType>
@@ -275,17 +402,11 @@
     <Compile Include="UI\frmPromotion.Designer.cs">
       <DependentUpon>frmPromotion.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmItemMaster.cs">
+    <Compile Include="UI\Opration List.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmItemMaster.Designer.cs">
-      <DependentUpon>frmItemMaster.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\frmVechileReqForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\frmVechileReqForm.Designer.cs">
-      <DependentUpon>frmVechileReqForm.cs</DependentUpon>
+    <Compile Include="UI\Opration List.Designer.cs">
+      <DependentUpon>Opration List.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\PoItemsDialog.cs">
       <SubType>Form</SubType>
@@ -293,38 +414,37 @@
     <Compile Include="UI\PoItemsDialog.Designer.cs">
       <DependentUpon>PoItemsDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmSupplierMaster.cs">
+    <Compile Include="UI\SplashScreen1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmSupplierMaster.Designer.cs">
-      <DependentUpon>frmSupplierMaster.cs</DependentUpon>
+    <Compile Include="UI\SplashScreen1.Designer.cs">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\StockRequisition.cs">
+    <Compile Include="UI\User Accounts\frmLoging.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\StockRequisition.Designer.cs">
-      <DependentUpon>StockRequisition.cs</DependentUpon>
+    <Compile Include="UI\User Accounts\frmLoging.Designer.cs">
+      <DependentUpon>frmLoging.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\validate.cs" />
     <Compile Include="UI\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\_PORepo.cs" />
-    <Compile Include="UI\_RunningNo.cs" />
     <Compile Include="Validation\Validator.cs" />
-    <Compile Include="ViewModel\clsRuningNoEngine.cs" />
+    <Compile Include="ViewModel\ConnectionTools.cs" />
+    <Compile Include="ViewModel\CutReport.cs" />
     <Compile Include="ViewModel\GenarateTags.cs" />
+    <Compile Include="ViewModel\HourlyProduction.cs" />
     <Compile Include="ViewModel\ImportExcelHelper.cs" />
     <Compile Include="ViewModel\MyExcel.cs" />
+    <Compile Include="ViewModel\OperationListSelection.cs" />
+    <Compile Include="ViewModel\PoDeliveries.cs" />
     <Compile Include="ViewModel\PurchaseHeaderVM.cs" />
+    <Compile Include="ViewModel\TextFileReadingHelper.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201601290735099_StockLedger.resx">
-      <DependentUpon>201601290735099_StockLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -337,15 +457,61 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports\BarcodeLabel.resx">
+      <DependentUpon>BarcodeLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HourlyProduction.resx">
+      <DependentUpon>HourlyProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\HourlyProductionByOperation.resx">
+      <DependentUpon>HourlyProductionByOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MatirialDetails.resx">
+      <DependentUpon>MatirialDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report\RptbundleTicket.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RptbundleTicket.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Stock Report\rtGRN.resx">
-      <DependentUpon>rtGRN.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\Report\sBundleTicket.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>sBundleTicket.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Stock Report\rtPO.resx">
-      <DependentUpon>rtPO.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\rptBarcodeList.resx">
+      <DependentUpon>rptBarcodeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCutS.resx">
+      <DependentUpon>rptCutS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCuttingDetails.resx">
+      <DependentUpon>rptCuttingDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDailiyProByHour.resx">
+      <DependentUpon>rptDailiyProByHour.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDayend.resx">
+      <DependentUpon>rptDayend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptDividingPlan.resx">
+      <DependentUpon>rptDividingPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptHProduction.resx">
+      <DependentUpon>rptHProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPoDiliveries.resx">
+      <DependentUpon>rptPoDiliveries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptTICKET.resx">
+      <DependentUpon>rptTICKET.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\BundleWiseProduction.resx">
+      <DependentUpon>BundleWiseProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\dailyProductionDialog.resx">
+      <DependentUpon>dailyProductionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\dlgBundleSelect.resx">
+      <DependentUpon>dlgBundleSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\dlgdividingplan.resx">
       <DependentUpon>dlgdividingplan.cs</DependentUpon>
@@ -359,6 +525,9 @@
     <EmbeddedResource Include="UI\frmAward.resx">
       <DependentUpon>frmAward.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmBundlePrintoption.resx">
+      <DependentUpon>frmBundlePrintoption.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmBundlingMaster.resx">
       <DependentUpon>frmBundlingMaster.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,11 +540,11 @@
     <EmbeddedResource Include="UI\frmcompanyDialog.resx">
       <DependentUpon>frmcompanyDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmCustomFieldsSetup.resx">
-      <DependentUpon>frmCustomFieldsSetup.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCuttingMaster.resx">
       <DependentUpon>frmCuttingMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmDayend.resx">
+      <DependentUpon>frmDayend.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmDividingPlan.resx">
       <DependentUpon>frmDividingPlan.cs</DependentUpon>
@@ -383,11 +552,20 @@
     <EmbeddedResource Include="UI\frmDividingPlanItem.resx">
       <DependentUpon>frmDividingPlanItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmGRN.resx">
-      <DependentUpon>frmGRN.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frmHourlyProductionDialog.resx">
+      <DependentUpon>frmHourlyProductionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmHourlyProductionOut.resx">
+      <DependentUpon>frmHourlyProductionOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmIndividualProductionDialog.resx">
+      <DependentUpon>frmIndividualProductionDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmOfflineScaning.resx">
+      <DependentUpon>frmOfflineScaning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmOparationScaning.resx">
       <DependentUpon>frmOparationScaning.cs</DependentUpon>
@@ -398,8 +576,8 @@
     <EmbeddedResource Include="UI\frmParts.resx">
       <DependentUpon>frmParts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmPo.resx">
-      <DependentUpon>frmPo.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frmPoDeliveriesDialog.resx">
+      <DependentUpon>frmPoDeliveriesDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPrintBarcode.resx">
       <DependentUpon>frmPrintBarcode.cs</DependentUpon>
@@ -410,8 +588,8 @@
     <EmbeddedResource Include="UI\frmPurchaseOrder.resx">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmRunningNo.resx">
-      <DependentUpon>frmRunningNo.cs</DependentUpon>
+    <EmbeddedResource Include="UI\frmScaningTimeScadual.resx">
+      <DependentUpon>frmScaningTimeScadual.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmSketchMaster.resx">
       <DependentUpon>frmSketchMaster.cs</DependentUpon>
@@ -422,27 +600,38 @@
     <EmbeddedResource Include="UI\frmPromotion.resx">
       <DependentUpon>frmPromotion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmItemMaster.resx">
-      <DependentUpon>frmItemMaster.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmVechileReqForm.resx">
-      <DependentUpon>frmVechileReqForm.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Opration List.resx">
+      <DependentUpon>Opration List.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\PoItemsDialog.resx">
       <DependentUpon>PoItemsDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmSupplierMaster.resx">
-      <DependentUpon>frmSupplierMaster.cs</DependentUpon>
+    <EmbeddedResource Include="UI\SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\StockRequisition.resx">
-      <DependentUpon>StockRequisition.cs</DependentUpon>
+    <EmbeddedResource Include="UI\User Accounts\frmLoging.resx">
+      <DependentUpon>frmLoging.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\ITRACK.models.GrnItems.datasource" />
-    <None Include="Properties\DataSources\ITRACK.models.PoItems.datasource" />
+    <None Include="Properties\DataSources\EFTesting.Reports.dailyProductionByHour.datasource" />
+    <None Include="Properties\DataSources\EFTesting.Reports.HourlyIndividualProduction.datasource" />
+    <None Include="Properties\DataSources\EFTesting.Reports.HourlyProductionByOperation.datasource" />
+    <None Include="Properties\DataSources\EFTesting.Reports.OprationBarcodeList.datasource" />
+    <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport.datasource" />
+    <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport1.datasource" />
+    <None Include="Properties\DataSources\EFTesting.ViewModel.CutReport2.datasource" />
+    <None Include="Properties\DataSources\EFTesting.ViewModel.HourlyProduction.datasource" />
+    <None Include="Properties\DataSources\EFTesting.ViewModel.HourlyProductionList.datasource" />
+    <None Include="Properties\DataSources\EFTesting.ViewModel.PoDeliveries.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.CuttingItem.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.DayendHeader.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.DividingPlanHeader.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.DividingPlanItem.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.LayinDetails.datasource" />
+    <None Include="Properties\DataSources\ITRACK.models.OprationBarcodes.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -475,6 +664,17 @@
     </None>
     <None Include="Reports\Dataset\BundleTicket.xss">
       <DependentUpon>BundleTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\dsetCutReport.xsc">
+      <DependentUpon>dsetCutReport.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\Dataset\dsetCutReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsetCutReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reports\Dataset\dsetCutReport.xss">
+      <DependentUpon>dsetCutReport.xsd</DependentUpon>
     </None>
     <None Include="Resources\55281.png" />
   </ItemGroup>

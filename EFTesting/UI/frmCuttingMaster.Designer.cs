@@ -55,24 +55,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtCuttingTicketNo = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.txtlineNo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.label19 = new System.Windows.Forms.Label();
+            this.txtPoNo = new DevExpress.XtraEditors.TextEdit();
             this.txtfabricType = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtColorCode = new DevExpress.XtraEditors.ComboBoxEdit();
             this.txtSize = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label24 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.label21 = new System.Windows.Forms.Label();
-            this.txtmarkerWidth = new DevExpress.XtraEditors.TextEdit();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtmarkerLenth = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtlineNo = new DevExpress.XtraEditors.TextEdit();
             this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
             this.btnEditItem = new DevExpress.XtraEditors.SimpleButton();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtnoOfplysLayed = new DevExpress.XtraEditors.TextEdit();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtnoOfplysPlan = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
             this.txtnoOfLayers = new DevExpress.XtraEditors.TextEdit();
             this.label18 = new System.Windows.Forms.Label();
@@ -87,8 +81,36 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMarkerNo = new DevExpress.XtraEditors.TextEdit();
             this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
-            this.txtFileName = new System.Windows.Forms.TextBox();
             this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
+            this.txtMNo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.btnEditFabric = new DevExpress.XtraEditors.SimpleButton();
+            this.grdFabricDetails = new DevExpress.XtraGrid.GridControl();
+            this.gridView4 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.label33 = new System.Windows.Forms.Label();
+            this.txtTotalPcs = new DevExpress.XtraEditors.TextEdit();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtFabused = new DevExpress.XtraEditors.TextEdit();
+            this.label31 = new System.Windows.Forms.Label();
+            this.txtRest = new DevExpress.XtraEditors.TextEdit();
+            this.label30 = new System.Windows.Forms.Label();
+            this.txtNoOfPlys = new DevExpress.XtraEditors.TextEdit();
+            this.label28 = new System.Windows.Forms.Label();
+            this.txtRollHegiht = new DevExpress.XtraEditors.TextEdit();
+            this.label27 = new System.Windows.Forms.Label();
+            this.txtRollWidth = new DevExpress.XtraEditors.TextEdit();
+            this.label26 = new System.Windows.Forms.Label();
+            this.txtRoleNo = new DevExpress.XtraEditors.TextEdit();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.btnAddFabric = new DevExpress.XtraEditors.SimpleButton();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.pivotGridControl1 = new DevExpress.XtraPivotGrid.PivotGridControl();
+            this.dsetCutReport1 = new EFTesting.Reports.Dataset.dsetCutReport();
+            this.fieldDate1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldLineNo1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldColor1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldSize1 = new DevExpress.XtraPivotGrid.PivotGridField();
+            this.fieldNoOfItem1 = new DevExpress.XtraPivotGrid.PivotGridField();
             this.label12 = new System.Windows.Forms.Label();
             this.textEdit7 = new DevExpress.XtraEditors.TextEdit();
             this.label13 = new System.Windows.Forms.Label();
@@ -97,6 +119,8 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.grdSearch = new DevExpress.XtraGrid.GridControl();
             this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.txtSearchBox.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
@@ -111,14 +135,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtRemark.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCuttingTicketNo.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtlineNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPoNo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtfabricType.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmarkerWidth.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmarkerLenth.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtlineNo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtnoOfplysLayed.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtnoOfplysPlan.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnoOfLayers.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnoOfItem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLength.Properties)).BeginInit();
@@ -126,6 +147,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkerNo.Properties)).BeginInit();
             this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMNo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdFabricDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPcs.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFabused.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRest.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoOfPlys.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRollHegiht.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRollWidth.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRoleNo.Properties)).BeginInit();
+            this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsetCutReport1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
@@ -145,7 +179,7 @@
             // btnClose
             // 
             this.btnClose.Image = global::EFTesting.Properties.Resources.save1;
-            this.btnClose.Location = new System.Drawing.Point(776, 4);
+            this.btnClose.Location = new System.Drawing.Point(866, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 13;
@@ -154,7 +188,7 @@
             // txtSearchBox
             // 
             this.txtSearchBox.EditValue = "";
-            this.txtSearchBox.Location = new System.Drawing.Point(485, 14);
+            this.txtSearchBox.Location = new System.Drawing.Point(575, 14);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Properties.AccessibleDescription = "";
             this.txtSearchBox.Properties.NullText = "Please Enter Buyer Name";
@@ -168,7 +202,7 @@
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.update;
-            this.simpleButton1.Location = new System.Drawing.Point(389, 3);
+            this.simpleButton1.Location = new System.Drawing.Point(479, 3);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(85, 39);
             this.simpleButton1.TabIndex = 11;
@@ -219,7 +253,8 @@
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2,
-            this.xtraTabPage3});
+            this.xtraTabPage3,
+            this.xtraTabPage4});
             // 
             // xtraTabPage1
             // 
@@ -264,10 +299,9 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label23.Location = new System.Drawing.Point(80, 29);
+            this.label23.Location = new System.Drawing.Point(80, 16);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(306, 13);
+            this.label23.Size = new System.Drawing.Size(258, 13);
             this.label23.TabIndex = 49;
             this.label23.Text = "General Cut Ticket Infromation / Header Information";
             // 
@@ -422,24 +456,18 @@
             // xtraTabPage2
             // 
             this.xtraTabPage2.AutoScroll = true;
+            this.xtraTabPage2.Controls.Add(this.txtlineNo);
+            this.xtraTabPage2.Controls.Add(this.label19);
+            this.xtraTabPage2.Controls.Add(this.txtPoNo);
             this.xtraTabPage2.Controls.Add(this.txtfabricType);
             this.xtraTabPage2.Controls.Add(this.txtColorCode);
             this.xtraTabPage2.Controls.Add(this.txtSize);
             this.xtraTabPage2.Controls.Add(this.label24);
             this.xtraTabPage2.Controls.Add(this.label22);
             this.xtraTabPage2.Controls.Add(this.simpleButton6);
-            this.xtraTabPage2.Controls.Add(this.label21);
-            this.xtraTabPage2.Controls.Add(this.txtmarkerWidth);
-            this.xtraTabPage2.Controls.Add(this.label8);
-            this.xtraTabPage2.Controls.Add(this.txtmarkerLenth);
             this.xtraTabPage2.Controls.Add(this.label1);
-            this.xtraTabPage2.Controls.Add(this.txtlineNo);
             this.xtraTabPage2.Controls.Add(this.simpleButton4);
             this.xtraTabPage2.Controls.Add(this.btnEditItem);
-            this.xtraTabPage2.Controls.Add(this.label20);
-            this.xtraTabPage2.Controls.Add(this.txtnoOfplysLayed);
-            this.xtraTabPage2.Controls.Add(this.label19);
-            this.xtraTabPage2.Controls.Add(this.txtnoOfplysPlan);
             this.xtraTabPage2.Controls.Add(this.label5);
             this.xtraTabPage2.Controls.Add(this.txtnoOfLayers);
             this.xtraTabPage2.Controls.Add(this.label18);
@@ -457,9 +485,51 @@
             this.xtraTabPage2.Size = new System.Drawing.Size(1236, 446);
             this.xtraTabPage2.Text = "Marker ";
             // 
+            // txtlineNo
+            // 
+            this.txtlineNo.Location = new System.Drawing.Point(262, 44);
+            this.txtlineNo.Name = "txtlineNo";
+            this.txtlineNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtlineNo.Properties.Items.AddRange(new object[] {
+            "V-1",
+            "V-2",
+            "V-3",
+            "V-4",
+            "V-5",
+            "V-6",
+            "V-7",
+            "V-8",
+            "V-9",
+            "V-10"});
+            this.txtlineNo.Properties.NullValuePrompt = "Please Select Size";
+            this.txtlineNo.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
+            this.txtlineNo.Size = new System.Drawing.Size(254, 20);
+            this.txtlineNo.TabIndex = 87;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(3, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(35, 13);
+            this.label19.TabIndex = 87;
+            this.label19.Text = "Po No";
+            // 
+            // txtPoNo
+            // 
+            this.txtPoNo.EditValue = "";
+            this.txtPoNo.Location = new System.Drawing.Point(5, 44);
+            this.txtPoNo.Name = "txtPoNo";
+            this.txtPoNo.Properties.AccessibleDescription = "";
+            this.txtPoNo.Properties.NullValuePrompt = "Please Enter Line Number";
+            this.txtPoNo.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtPoNo.Size = new System.Drawing.Size(251, 20);
+            this.txtPoNo.TabIndex = 86;
+            // 
             // txtfabricType
             // 
-            this.txtfabricType.Location = new System.Drawing.Point(592, 40);
+            this.txtfabricType.Location = new System.Drawing.Point(783, 44);
             this.txtfabricType.Name = "txtfabricType";
             this.txtfabricType.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -470,11 +540,11 @@
             "Other Fabric"});
             this.txtfabricType.Properties.NullValuePrompt = "Please Select Fabric Type";
             this.txtfabricType.Size = new System.Drawing.Size(251, 20);
-            this.txtfabricType.TabIndex = 3;
+            this.txtfabricType.TabIndex = 89;
             // 
             // txtColorCode
             // 
-            this.txtColorCode.Location = new System.Drawing.Point(852, 38);
+            this.txtColorCode.Location = new System.Drawing.Point(1040, 44);
             this.txtColorCode.Name = "txtColorCode";
             this.txtColorCode.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -484,29 +554,28 @@
             // 
             // txtSize
             // 
-            this.txtSize.Location = new System.Drawing.Point(594, 127);
+            this.txtSize.Location = new System.Drawing.Point(527, 88);
             this.txtSize.Name = "txtSize";
             this.txtSize.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.txtSize.Properties.NullValuePrompt = "Please Select Size";
             this.txtSize.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.txtSize.Size = new System.Drawing.Size(195, 20);
-            this.txtSize.TabIndex = 11;
+            this.txtSize.TabIndex = 92;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label24.Location = new System.Drawing.Point(67, 3);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(197, 13);
+            this.label24.Size = new System.Drawing.Size(167, 13);
             this.label24.TabIndex = 85;
             this.label24.Text = "Marker Details and Layer Details  ";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(588, 20);
+            this.label22.Location = new System.Drawing.Point(779, 24);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(63, 13);
             this.label22.TabIndex = 83;
@@ -514,76 +583,25 @@
             // 
             // simpleButton6
             // 
-            this.simpleButton6.Location = new System.Drawing.Point(795, 125);
+            this.simpleButton6.Location = new System.Drawing.Point(728, 86);
             this.simpleButton6.Name = "simpleButton6";
             this.simpleButton6.Size = new System.Drawing.Size(52, 23);
             this.simpleButton6.TabIndex = 82;
             this.simpleButton6.Text = "List";
             this.simpleButton6.Click += new System.EventHandler(this.simpleButton6_Click);
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(333, 109);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 13);
-            this.label21.TabIndex = 81;
-            this.label21.Text = "Marker Width";
-            // 
-            // txtmarkerWidth
-            // 
-            this.txtmarkerWidth.EditValue = "";
-            this.txtmarkerWidth.Location = new System.Drawing.Point(332, 128);
-            this.txtmarkerWidth.Name = "txtmarkerWidth";
-            this.txtmarkerWidth.Properties.AccessibleDescription = "";
-            this.txtmarkerWidth.Properties.NullValuePrompt = "Please Enter Marker Width";
-            this.txtmarkerWidth.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtmarkerWidth.Size = new System.Drawing.Size(251, 20);
-            this.txtmarkerWidth.TabIndex = 10;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(75, 109);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(70, 13);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "Marker Lenth";
-            // 
-            // txtmarkerLenth
-            // 
-            this.txtmarkerLenth.EditValue = "";
-            this.txtmarkerLenth.Location = new System.Drawing.Point(74, 128);
-            this.txtmarkerLenth.Name = "txtmarkerLenth";
-            this.txtmarkerLenth.Properties.AccessibleDescription = "";
-            this.txtmarkerLenth.Properties.NullValuePrompt = "Please Enter Marker Length";
-            this.txtmarkerLenth.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtmarkerLenth.Size = new System.Drawing.Size(251, 20);
-            this.txtmarkerLenth.TabIndex = 9;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 22);
+            this.label1.Location = new System.Drawing.Point(260, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 77;
             this.label1.Text = "Line No";
             // 
-            // txtlineNo
-            // 
-            this.txtlineNo.EditValue = "";
-            this.txtlineNo.Location = new System.Drawing.Point(71, 41);
-            this.txtlineNo.Name = "txtlineNo";
-            this.txtlineNo.Properties.AccessibleDescription = "";
-            this.txtlineNo.Properties.NullValuePrompt = "Please Enter Line Number";
-            this.txtlineNo.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtlineNo.Size = new System.Drawing.Size(251, 20);
-            this.txtlineNo.TabIndex = 1;
-            // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(233, 154);
+            this.simpleButton4.Location = new System.Drawing.Point(344, 124);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(75, 23);
             this.simpleButton4.TabIndex = 15;
@@ -592,57 +610,17 @@
             // 
             // btnEditItem
             // 
-            this.btnEditItem.Location = new System.Drawing.Point(152, 154);
+            this.btnEditItem.Location = new System.Drawing.Point(263, 124);
             this.btnEditItem.Name = "btnEditItem";
             this.btnEditItem.Size = new System.Drawing.Size(75, 23);
             this.btnEditItem.TabIndex = 14;
             this.btnEditItem.Text = "Edit";
             this.btnEditItem.Click += new System.EventHandler(this.simpleButton3_Click);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(850, 64);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(89, 13);
-            this.label20.TabIndex = 73;
-            this.label20.Text = "No Of Plys Layed";
-            // 
-            // txtnoOfplysLayed
-            // 
-            this.txtnoOfplysLayed.EditValue = "";
-            this.txtnoOfplysLayed.Location = new System.Drawing.Point(852, 83);
-            this.txtnoOfplysLayed.Name = "txtnoOfplysLayed";
-            this.txtnoOfplysLayed.Properties.AccessibleDescription = "";
-            this.txtnoOfplysLayed.Properties.NullValuePrompt = "Please Enter Number of Plys Layed";
-            this.txtnoOfplysLayed.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtnoOfplysLayed.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfplysLayed.TabIndex = 8;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(592, 65);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(80, 13);
-            this.label19.TabIndex = 71;
-            this.label19.Text = "No Of Plys Plan";
-            // 
-            // txtnoOfplysPlan
-            // 
-            this.txtnoOfplysPlan.EditValue = "";
-            this.txtnoOfplysPlan.Location = new System.Drawing.Point(594, 84);
-            this.txtnoOfplysPlan.Name = "txtnoOfplysPlan";
-            this.txtnoOfplysPlan.Properties.AccessibleDescription = "";
-            this.txtnoOfplysPlan.Properties.NullValuePrompt = "Please Enter Number of Plys";
-            this.txtnoOfplysPlan.Properties.NullValuePromptShowForEmptyValue = true;
-            this.txtnoOfplysPlan.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfplysPlan.TabIndex = 7;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(333, 65);
+            this.label5.Location = new System.Drawing.Point(267, 69);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 13);
             this.label5.TabIndex = 69;
@@ -651,18 +629,18 @@
             // txtnoOfLayers
             // 
             this.txtnoOfLayers.EditValue = "";
-            this.txtnoOfLayers.Location = new System.Drawing.Point(335, 84);
+            this.txtnoOfLayers.Location = new System.Drawing.Point(269, 88);
             this.txtnoOfLayers.Name = "txtnoOfLayers";
             this.txtnoOfLayers.Properties.AccessibleDescription = "";
             this.txtnoOfLayers.Properties.NullValuePrompt = "Please Enter Number of Layer";
             this.txtnoOfLayers.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtnoOfLayers.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfLayers.TabIndex = 6;
+            this.txtnoOfLayers.TabIndex = 91;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(852, 107);
+            this.label18.Location = new System.Drawing.Point(785, 68);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(79, 13);
             this.label18.TabIndex = 67;
@@ -671,38 +649,38 @@
             // txtnoOfItem
             // 
             this.txtnoOfItem.EditValue = "";
-            this.txtnoOfItem.Location = new System.Drawing.Point(854, 126);
+            this.txtnoOfItem.Location = new System.Drawing.Point(787, 87);
             this.txtnoOfItem.Name = "txtnoOfItem";
             this.txtnoOfItem.Properties.AccessibleDescription = "";
             this.txtnoOfItem.Properties.NullValuePrompt = "Please Enter No Of Garment";
             this.txtnoOfItem.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtnoOfItem.Size = new System.Drawing.Size(251, 20);
-            this.txtnoOfItem.TabIndex = 12;
+            this.txtnoOfItem.TabIndex = 93;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(70, 65);
+            this.label17.Location = new System.Drawing.Point(4, 69);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(40, 13);
+            this.label17.Size = new System.Drawing.Size(38, 13);
             this.label17.TabIndex = 65;
-            this.label17.Text = "Length";
+            this.label17.Text = "Lot No";
             // 
             // txtLength
             // 
             this.txtLength.EditValue = "";
-            this.txtLength.Location = new System.Drawing.Point(72, 84);
+            this.txtLength.Location = new System.Drawing.Point(6, 88);
             this.txtLength.Name = "txtLength";
             this.txtLength.Properties.AccessibleDescription = "";
             this.txtLength.Properties.NullValuePrompt = "Please EnterLength";
             this.txtLength.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtLength.Size = new System.Drawing.Size(251, 20);
-            this.txtLength.TabIndex = 5;
+            this.txtLength.TabIndex = 90;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(589, 109);
+            this.label16.Location = new System.Drawing.Point(522, 70);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(26, 13);
             this.label16.TabIndex = 63;
@@ -711,7 +689,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(850, 22);
+            this.label15.Location = new System.Drawing.Point(1038, 28);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(63, 13);
             this.label15.TabIndex = 61;
@@ -719,7 +697,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(71, 154);
+            this.simpleButton2.Location = new System.Drawing.Point(182, 124);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(75, 23);
             this.simpleButton2.TabIndex = 13;
@@ -732,23 +710,25 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdItemList.Cursor = System.Windows.Forms.Cursors.Default;
-            this.grdItemList.Location = new System.Drawing.Point(3, 181);
+            this.grdItemList.Location = new System.Drawing.Point(7, 115);
             this.grdItemList.MainView = this.gridView1;
             this.grdItemList.Name = "grdItemList";
-            this.grdItemList.Size = new System.Drawing.Size(1208, 305);
+            this.grdItemList.Size = new System.Drawing.Size(1183, 311);
             this.grdItemList.TabIndex = 57;
             this.grdItemList.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.Appearance.GroupButton.Options.UseTextOptions = true;
+            this.gridView1.Appearance.GroupButton.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
             this.gridView1.GridControl = this.grdItemList;
             this.gridView1.Name = "gridView1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 22);
+            this.label3.Location = new System.Drawing.Point(522, 26);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 15;
@@ -757,38 +737,318 @@
             // txtMarkerNo
             // 
             this.txtMarkerNo.EditValue = "";
-            this.txtMarkerNo.Location = new System.Drawing.Point(333, 41);
+            this.txtMarkerNo.Location = new System.Drawing.Point(524, 45);
             this.txtMarkerNo.Name = "txtMarkerNo";
             this.txtMarkerNo.Properties.AccessibleDescription = "";
             this.txtMarkerNo.Properties.NullValuePrompt = "Please Enter Markr Number";
             this.txtMarkerNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtMarkerNo.Size = new System.Drawing.Size(251, 20);
-            this.txtMarkerNo.TabIndex = 2;
+            this.txtMarkerNo.TabIndex = 88;
             // 
             // xtraTabPage3
             // 
-            this.xtraTabPage3.Controls.Add(this.txtFileName);
             this.xtraTabPage3.Controls.Add(this.simpleButton5);
+            this.xtraTabPage3.Controls.Add(this.txtMNo);
+            this.xtraTabPage3.Controls.Add(this.btnEditFabric);
+            this.xtraTabPage3.Controls.Add(this.grdFabricDetails);
+            this.xtraTabPage3.Controls.Add(this.label33);
+            this.xtraTabPage3.Controls.Add(this.txtTotalPcs);
+            this.xtraTabPage3.Controls.Add(this.label32);
+            this.xtraTabPage3.Controls.Add(this.txtFabused);
+            this.xtraTabPage3.Controls.Add(this.label31);
+            this.xtraTabPage3.Controls.Add(this.txtRest);
+            this.xtraTabPage3.Controls.Add(this.label30);
+            this.xtraTabPage3.Controls.Add(this.txtNoOfPlys);
+            this.xtraTabPage3.Controls.Add(this.label28);
+            this.xtraTabPage3.Controls.Add(this.txtRollHegiht);
+            this.xtraTabPage3.Controls.Add(this.label27);
+            this.xtraTabPage3.Controls.Add(this.txtRollWidth);
+            this.xtraTabPage3.Controls.Add(this.label26);
+            this.xtraTabPage3.Controls.Add(this.txtRoleNo);
+            this.xtraTabPage3.Controls.Add(this.label29);
+            this.xtraTabPage3.Controls.Add(this.label25);
+            this.xtraTabPage3.Controls.Add(this.btnAddFabric);
             this.xtraTabPage3.Image = global::EFTesting.Properties.Resources.Folder_Accept_icon;
             this.xtraTabPage3.Name = "xtraTabPage3";
             this.xtraTabPage3.Size = new System.Drawing.Size(1236, 446);
             this.xtraTabPage3.Text = "F/Consumption";
-            // 
-            // txtFileName
-            // 
-            this.txtFileName.Location = new System.Drawing.Point(258, 63);
-            this.txtFileName.Name = "txtFileName";
-            this.txtFileName.Size = new System.Drawing.Size(222, 21);
-            this.txtFileName.TabIndex = 1;
+            this.xtraTabPage3.Paint += new System.Windows.Forms.PaintEventHandler(this.xtraTabPage3_Paint);
             // 
             // simpleButton5
             // 
-            this.simpleButton5.Location = new System.Drawing.Point(511, 63);
+            this.simpleButton5.Location = new System.Drawing.Point(221, 124);
             this.simpleButton5.Name = "simpleButton5";
             this.simpleButton5.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton5.TabIndex = 2;
-            this.simpleButton5.Text = "Add";
-            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click);
+            this.simpleButton5.TabIndex = 109;
+            this.simpleButton5.Text = "Print";
+            this.simpleButton5.Click += new System.EventHandler(this.simpleButton5_Click_1);
+            // 
+            // txtMNo
+            // 
+            this.txtMNo.Location = new System.Drawing.Point(49, 46);
+            this.txtMNo.Name = "txtMNo";
+            this.txtMNo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtMNo.Size = new System.Drawing.Size(247, 20);
+            this.txtMNo.TabIndex = 108;
+            // 
+            // btnEditFabric
+            // 
+            this.btnEditFabric.Location = new System.Drawing.Point(135, 124);
+            this.btnEditFabric.Name = "btnEditFabric";
+            this.btnEditFabric.Size = new System.Drawing.Size(75, 23);
+            this.btnEditFabric.TabIndex = 107;
+            this.btnEditFabric.Text = "Edit";
+            // 
+            // grdFabricDetails
+            // 
+            this.grdFabricDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grdFabricDetails.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdFabricDetails.Location = new System.Drawing.Point(48, 160);
+            this.grdFabricDetails.MainView = this.gridView4;
+            this.grdFabricDetails.Name = "grdFabricDetails";
+            this.grdFabricDetails.Size = new System.Drawing.Size(1208, 276);
+            this.grdFabricDetails.TabIndex = 106;
+            this.grdFabricDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView4});
+            // 
+            // gridView4
+            // 
+            this.gridView4.GridControl = this.grdFabricDetails;
+            this.gridView4.Name = "gridView4";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(813, 73);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(50, 13);
+            this.label33.TabIndex = 105;
+            this.label33.Text = "Total Pcs";
+            // 
+            // txtTotalPcs
+            // 
+            this.txtTotalPcs.EditValue = "";
+            this.txtTotalPcs.Location = new System.Drawing.Point(815, 92);
+            this.txtTotalPcs.Name = "txtTotalPcs";
+            this.txtTotalPcs.Properties.AccessibleDescription = "";
+            this.txtTotalPcs.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtTotalPcs.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtTotalPcs.Size = new System.Drawing.Size(251, 20);
+            this.txtTotalPcs.TabIndex = 104;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(558, 73);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(52, 13);
+            this.label32.TabIndex = 103;
+            this.label32.Text = "Fab Used";
+            // 
+            // txtFabused
+            // 
+            this.txtFabused.EditValue = "";
+            this.txtFabused.Location = new System.Drawing.Point(560, 92);
+            this.txtFabused.Name = "txtFabused";
+            this.txtFabused.Properties.AccessibleDescription = "";
+            this.txtFabused.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtFabused.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtFabused.Size = new System.Drawing.Size(251, 20);
+            this.txtFabused.TabIndex = 102;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(301, 73);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(29, 13);
+            this.label31.TabIndex = 101;
+            this.label31.Text = "Rest";
+            // 
+            // txtRest
+            // 
+            this.txtRest.EditValue = "";
+            this.txtRest.Location = new System.Drawing.Point(303, 92);
+            this.txtRest.Name = "txtRest";
+            this.txtRest.Properties.AccessibleDescription = "";
+            this.txtRest.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtRest.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtRest.Size = new System.Drawing.Size(251, 20);
+            this.txtRest.TabIndex = 100;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(46, 73);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(57, 13);
+            this.label30.TabIndex = 99;
+            this.label30.Text = "No Of Plys";
+            // 
+            // txtNoOfPlys
+            // 
+            this.txtNoOfPlys.EditValue = "";
+            this.txtNoOfPlys.Location = new System.Drawing.Point(48, 92);
+            this.txtNoOfPlys.Name = "txtNoOfPlys";
+            this.txtNoOfPlys.Properties.AccessibleDescription = "";
+            this.txtNoOfPlys.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtNoOfPlys.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtNoOfPlys.Size = new System.Drawing.Size(251, 20);
+            this.txtNoOfPlys.TabIndex = 98;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(813, 29);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(92, 13);
+            this.label28.TabIndex = 97;
+            this.label28.Text = "Fabric Roll Length";
+            // 
+            // txtRollHegiht
+            // 
+            this.txtRollHegiht.EditValue = "";
+            this.txtRollHegiht.Location = new System.Drawing.Point(815, 48);
+            this.txtRollHegiht.Name = "txtRollHegiht";
+            this.txtRollHegiht.Properties.AccessibleDescription = "";
+            this.txtRollHegiht.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtRollHegiht.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtRollHegiht.Size = new System.Drawing.Size(251, 20);
+            this.txtRollHegiht.TabIndex = 96;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(557, 29);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(76, 13);
+            this.label27.TabIndex = 95;
+            this.label27.Text = "Marker Length";
+            // 
+            // txtRollWidth
+            // 
+            this.txtRollWidth.EditValue = "";
+            this.txtRollWidth.Location = new System.Drawing.Point(559, 48);
+            this.txtRollWidth.Name = "txtRollWidth";
+            this.txtRollWidth.Properties.AccessibleDescription = "";
+            this.txtRollWidth.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtRollWidth.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtRollWidth.Size = new System.Drawing.Size(251, 20);
+            this.txtRollWidth.TabIndex = 94;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(300, 29);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(72, 13);
+            this.label26.TabIndex = 93;
+            this.label26.Text = "Fabric Roll No";
+            // 
+            // txtRoleNo
+            // 
+            this.txtRoleNo.EditValue = "";
+            this.txtRoleNo.Location = new System.Drawing.Point(302, 48);
+            this.txtRoleNo.Name = "txtRoleNo";
+            this.txtRoleNo.Properties.AccessibleDescription = "";
+            this.txtRoleNo.Properties.NullValuePrompt = "Please Enter Markr Number";
+            this.txtRoleNo.Properties.NullValuePromptShowForEmptyValue = true;
+            this.txtRoleNo.Size = new System.Drawing.Size(251, 20);
+            this.txtRoleNo.TabIndex = 92;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(46, 29);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(56, 13);
+            this.label29.TabIndex = 91;
+            this.label29.Text = "Marker No";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(46, 6);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(164, 13);
+            this.label25.TabIndex = 86;
+            this.label25.Text = "Laying Details / Fabric Roll Entry ";
+            // 
+            // btnAddFabric
+            // 
+            this.btnAddFabric.Location = new System.Drawing.Point(49, 124);
+            this.btnAddFabric.Name = "btnAddFabric";
+            this.btnAddFabric.Size = new System.Drawing.Size(75, 23);
+            this.btnAddFabric.TabIndex = 2;
+            this.btnAddFabric.Text = "Add";
+            this.btnAddFabric.Click += new System.EventHandler(this.simpleButton5_Click);
+            // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Controls.Add(this.pivotGridControl1);
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(1236, 446);
+            this.xtraTabPage4.Text = "xtraTabPage4";
+            // 
+            // pivotGridControl1
+            // 
+            this.pivotGridControl1.DataMember = "cutItem";
+            this.pivotGridControl1.DataSource = this.dsetCutReport1;
+            this.pivotGridControl1.Fields.AddRange(new DevExpress.XtraPivotGrid.PivotGridField[] {
+            this.fieldDate1,
+            this.fieldLineNo1,
+            this.fieldColor1,
+            this.fieldSize1,
+            this.fieldNoOfItem1});
+            this.pivotGridControl1.Location = new System.Drawing.Point(49, 33);
+            this.pivotGridControl1.Name = "pivotGridControl1";
+            this.pivotGridControl1.Size = new System.Drawing.Size(988, 331);
+            this.pivotGridControl1.TabIndex = 0;
+            // 
+            // dsetCutReport1
+            // 
+            this.dsetCutReport1.DataSetName = "dsetCutReport";
+            this.dsetCutReport1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fieldDate1
+            // 
+            this.fieldDate1.AreaIndex = 2;
+            this.fieldDate1.Caption = "Date";
+            this.fieldDate1.FieldName = "Date";
+            this.fieldDate1.Name = "fieldDate1";
+            // 
+            // fieldLineNo1
+            // 
+            this.fieldLineNo1.AreaIndex = 0;
+            this.fieldLineNo1.Caption = "[Line No]";
+            this.fieldLineNo1.FieldName = "[LineNo]";
+            this.fieldLineNo1.Name = "fieldLineNo1";
+            // 
+            // fieldColor1
+            // 
+            this.fieldColor1.AreaIndex = 1;
+            this.fieldColor1.Caption = "Color";
+            this.fieldColor1.FieldName = "Color";
+            this.fieldColor1.Name = "fieldColor1";
+            // 
+            // fieldSize1
+            // 
+            this.fieldSize1.Area = DevExpress.XtraPivotGrid.PivotArea.ColumnArea;
+            this.fieldSize1.AreaIndex = 0;
+            this.fieldSize1.Caption = "Size";
+            this.fieldSize1.FieldName = "Size";
+            this.fieldSize1.Name = "fieldSize1";
+            // 
+            // fieldNoOfItem1
+            // 
+            this.fieldNoOfItem1.Area = DevExpress.XtraPivotGrid.PivotArea.DataArea;
+            this.fieldNoOfItem1.AreaIndex = 0;
+            this.fieldNoOfItem1.Caption = "No Of Item";
+            this.fieldNoOfItem1.FieldName = "NoOfItem";
+            this.fieldNoOfItem1.Name = "fieldNoOfItem1";
             // 
             // label12
             // 
@@ -865,7 +1125,7 @@
             this.grdSearch.Location = new System.Drawing.Point(14, 44);
             this.grdSearch.MainView = this.gridView3;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1250, 370);
+            this.grdSearch.Size = new System.Drawing.Size(1250, 410);
             this.grdSearch.TabIndex = 62;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView3});
@@ -876,11 +1136,22 @@
             this.gridView3.GridControl = this.grdSearch;
             this.gridView3.Name = "gridView3";
             // 
+            // simpleButton3
+            // 
+            this.simpleButton3.Image = global::EFTesting.Properties.Resources.update;
+            this.simpleButton3.Location = new System.Drawing.Point(389, 3);
+            this.simpleButton3.Name = "simpleButton3";
+            this.simpleButton3.Size = new System.Drawing.Size(85, 39);
+            this.simpleButton3.TabIndex = 63;
+            this.simpleButton3.Text = "Print";
+            this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click_1);
+            // 
             // frmCuttingMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1301, 548);
+            this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.grdSearch);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.textEdit7);
@@ -916,14 +1187,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtCuttingTicketNo.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtlineNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPoNo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtfabricType.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtColorCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSize.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmarkerWidth.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtmarkerLenth.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtlineNo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtnoOfplysLayed.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtnoOfplysPlan.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnoOfLayers.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtnoOfItem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtLength.Properties)).EndInit();
@@ -932,6 +1200,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtMarkerNo.Properties)).EndInit();
             this.xtraTabPage3.ResumeLayout(false);
             this.xtraTabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMNo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdFabricDetails)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTotalPcs.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFabused.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRest.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNoOfPlys.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRollHegiht.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRollWidth.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtRoleNo.Properties)).EndInit();
+            this.xtraTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pivotGridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsetCutReport1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit7.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit6.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
@@ -986,22 +1267,12 @@
         private DevExpress.XtraEditors.TextEdit txtnoOfLayers;
         private System.Windows.Forms.Label label18;
         private DevExpress.XtraEditors.TextEdit txtnoOfItem;
-        private System.Windows.Forms.Label label20;
-        private DevExpress.XtraEditors.TextEdit txtnoOfplysLayed;
-        private System.Windows.Forms.Label label19;
-        private DevExpress.XtraEditors.TextEdit txtnoOfplysPlan;
         private DevExpress.XtraEditors.SimpleButton simpleButton4;
         private DevExpress.XtraEditors.SimpleButton btnEditItem;
         private DevExpress.XtraGrid.GridControl grdSearch;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private System.Windows.Forms.TextBox txtFileName;
+        private DevExpress.XtraEditors.SimpleButton btnAddFabric;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit txtlineNo;
-        private System.Windows.Forms.Label label21;
-        private DevExpress.XtraEditors.TextEdit txtmarkerWidth;
-        private System.Windows.Forms.Label label8;
-        private DevExpress.XtraEditors.TextEdit txtmarkerLenth;
         private DevExpress.XtraEditors.SimpleButton simpleButton6;
         private System.Windows.Forms.Label label22;
         private DevExpress.XtraGrid.GridControl grdItemList;
@@ -1013,5 +1284,39 @@
         private DevExpress.XtraEditors.ComboBoxEdit txtfabricType;
         private DevExpress.XtraGrid.GridControl grdSearchStyle;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Label label26;
+        private DevExpress.XtraEditors.TextEdit txtRoleNo;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label31;
+        private DevExpress.XtraEditors.TextEdit txtRest;
+        private System.Windows.Forms.Label label30;
+        private DevExpress.XtraEditors.TextEdit txtNoOfPlys;
+        private System.Windows.Forms.Label label28;
+        private DevExpress.XtraEditors.TextEdit txtRollHegiht;
+        private System.Windows.Forms.Label label27;
+        private DevExpress.XtraEditors.TextEdit txtRollWidth;
+        private System.Windows.Forms.Label label33;
+        private DevExpress.XtraEditors.TextEdit txtTotalPcs;
+        private System.Windows.Forms.Label label32;
+        private DevExpress.XtraEditors.TextEdit txtFabused;
+        private DevExpress.XtraGrid.GridControl grdFabricDetails;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+        private DevExpress.XtraEditors.SimpleButton btnEditFabric;
+        private DevExpress.XtraEditors.ComboBoxEdit txtMNo;
+        private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton simpleButton5;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private DevExpress.XtraPivotGrid.PivotGridControl pivotGridControl1;
+        private Reports.Dataset.dsetCutReport dsetCutReport1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldDate1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldLineNo1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldColor1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldSize1;
+        private DevExpress.XtraPivotGrid.PivotGridField fieldNoOfItem1;
+        private System.Windows.Forms.Label label19;
+        private DevExpress.XtraEditors.TextEdit txtPoNo;
+        private DevExpress.XtraEditors.ComboBoxEdit txtlineNo;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

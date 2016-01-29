@@ -181,7 +181,8 @@ public class  Validator
     }
 
 
-    internal bool isPresent(DevExpress.XtraEditors.RadioGroup rdoStatus, string p)
+
+    internal bool isPresent()
     {
         throw new NotImplementedException();
     }

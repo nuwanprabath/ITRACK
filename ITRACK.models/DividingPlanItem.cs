@@ -18,9 +18,15 @@ namespace ITRACK.models
 
         public string MachineType { get; set; }
 
+        public string OperationRole { get; set; }
+
         public string PartName { get; set; }
 
         public double SMV { get; set; }
+
+        public int WorkstationNo { get; set; }
+
+        public int OpNo { get; set; }
 
         public virtual DividingPlanHeader DividingPlanHeader { get; set; }
 

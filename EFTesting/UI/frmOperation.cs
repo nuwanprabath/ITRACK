@@ -325,13 +325,20 @@ namespace EFTesting.UI
 
         private void grdSearch_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) {
-                _Operation.OperationPoolID = gridView2.GetFocusedRowCellValue("OperationPoolID").ToString();
-                getOperationFeild(_Operation.OperationPoolID);
-                grdSearch.Hide();
-                txtSearchBox.Hide();
-                btnClose.Hide();
+            try {
+                 if (e.KeyCode == Keys.Enter) {
+                    _Operation.OperationPoolID = gridView2.GetFocusedRowCellValue("OperationPoolID").ToString();
+                    getOperationFeild(_Operation.OperationPoolID);
+                    grdSearch.Hide();
+                    txtSearchBox.Hide();
+                    btnClose.Hide();
+                }
+            
             }
+            catch(Exception ex){
+            
+            }
+           
             
          
         }
@@ -468,6 +475,7 @@ namespace EFTesting.UI
                     TempOpration t = new TempOpration();
                     t.TempOprationID = _opration.TempOprationID;
                    _tOpration.Delete(t);
+                  
 
                 }
             }
@@ -508,6 +516,7 @@ namespace EFTesting.UI
         private void simpleButton2_Click(object sender, EventArgs e)
         {
             SaveOpration();
+            MessageBox.Show("Save Sucessfully !", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
       
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -521,6 +530,13 @@ namespace EFTesting.UI
         private void grdOperationList_MouseEnter(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            grdSearch.Hide();
+            txtSearchBox.Hide();
+            btnClose.Hide();
         }
     }
 }

@@ -52,6 +52,7 @@
             this.btnNew = new DevExpress.XtraEditors.SimpleButton();
             this.grdSearchStyle = new DevExpress.XtraGrid.GridControl();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lblResult = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -134,7 +135,7 @@
             this.txtStatus.Location = new System.Drawing.Point(627, 75);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Properties.AccessibleDescription = "";
-            this.txtStatus.Properties.NullValuePrompt = "Status";
+            this.txtStatus.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtStatus.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStatus.Size = new System.Drawing.Size(190, 20);
             this.txtStatus.TabIndex = 44;
@@ -154,7 +155,7 @@
             this.txtGarmentType.Location = new System.Drawing.Point(431, 75);
             this.txtGarmentType.Name = "txtGarmentType";
             this.txtGarmentType.Properties.AccessibleDescription = "";
-            this.txtGarmentType.Properties.NullValuePrompt = "Garment Type";
+            this.txtGarmentType.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtGarmentType.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtGarmentType.Size = new System.Drawing.Size(190, 20);
             this.txtGarmentType.TabIndex = 42;
@@ -174,7 +175,7 @@
             this.txtBuyerName.Location = new System.Drawing.Point(237, 75);
             this.txtBuyerName.Name = "txtBuyerName";
             this.txtBuyerName.Properties.AccessibleDescription = "";
-            this.txtBuyerName.Properties.NullValuePrompt = "Buyer Name";
+            this.txtBuyerName.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtBuyerName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBuyerName.Size = new System.Drawing.Size(190, 20);
             this.txtBuyerName.TabIndex = 40;
@@ -194,7 +195,7 @@
             this.txtStyleNo.Location = new System.Drawing.Point(41, 75);
             this.txtStyleNo.Name = "txtStyleNo";
             this.txtStyleNo.Properties.AccessibleDescription = "";
-            this.txtStyleNo.Properties.NullValuePrompt = "Style No";
+            this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(190, 20);
             this.txtStyleNo.TabIndex = 38;
@@ -202,10 +203,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(38, 30);
+            this.label11.Location = new System.Drawing.Point(39, 24);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(263, 13);
+            this.label11.Size = new System.Drawing.Size(221, 13);
             this.label11.TabIndex = 37;
             this.label11.Text = "Production Information /Header Information ";
             // 
@@ -284,6 +284,7 @@
             this.btnAdd.Size = new System.Drawing.Size(85, 39);
             this.btnAdd.TabIndex = 50;
             this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnNew
             // 
@@ -300,7 +301,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1000, 420);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1000, 428);
             this.grdSearchStyle.TabIndex = 57;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -312,11 +313,21 @@
             this.gridView2.GridControl = this.grdSearchStyle;
             this.gridView2.Name = "gridView2";
             // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Location = new System.Drawing.Point(855, 25);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(75, 13);
+            this.lblResult.TabIndex = 58;
+            this.lblResult.Text = "Garment Type";
+            // 
             // frmProduction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1045, 618);
+            this.Controls.Add(this.lblResult);
             this.Controls.Add(this.grdSearchStyle);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnClose);
@@ -343,6 +354,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grdSearchStyle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -372,5 +384,6 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.GridControl grdSearchStyle;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private System.Windows.Forms.Label lblResult;
     }
 }

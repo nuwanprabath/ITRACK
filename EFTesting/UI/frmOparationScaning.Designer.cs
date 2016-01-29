@@ -64,6 +64,9 @@
             this.lblTextDisplay = new System.Windows.Forms.Label();
             this.chkOnlineScaning = new DevExpress.XtraEditors.CheckEdit();
             this.chkOfflineScaning = new DevExpress.XtraEditors.CheckEdit();
+            this.textfileOpen = new System.Windows.Forms.OpenFileDialog();
+            this.txtDate = new System.Windows.Forms.DateTimePicker();
+            this.txtTime = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.imgprofile.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeName.Properties)).BeginInit();
@@ -173,12 +176,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(42, 34);
+            this.label5.Location = new System.Drawing.Point(42, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 13);
+            this.label5.Size = new System.Drawing.Size(153, 13);
             this.label5.TabIndex = 54;
-            this.label5.Text = "Employee Genral Information";
+            this.label5.Text = "Employee Genral Information /";
             // 
             // label6
             // 
@@ -203,10 +205,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label7.Location = new System.Drawing.Point(42, 269);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(220, 13);
+            this.label7.Size = new System.Drawing.Size(186, 13);
             this.label7.TabIndex = 57;
             this.label7.Text = "Bundle Information / Scaning Details  ";
             // 
@@ -373,7 +374,7 @@
             // txtBarcode
             // 
             this.txtBarcode.EditValue = "";
-            this.txtBarcode.Location = new System.Drawing.Point(158, 452);
+            this.txtBarcode.Location = new System.Drawing.Point(158, 451);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Properties.AccessibleDescription = "";
             this.txtBarcode.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 18F);
@@ -388,30 +389,31 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label16.Location = new System.Drawing.Point(42, 421);
+            this.label16.Location = new System.Drawing.Point(160, 430);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(112, 13);
+            this.label16.Size = new System.Drawing.Size(97, 13);
             this.label16.TabIndex = 75;
             this.label16.Text = "Operation Barcode";
             // 
             // simpleButton4
             // 
             this.simpleButton4.Image = global::EFTesting.Properties.Resources.save;
-            this.simpleButton4.Location = new System.Drawing.Point(158, 499);
+            this.simpleButton4.Location = new System.Drawing.Point(158, 498);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(162, 39);
             this.simpleButton4.TabIndex = 76;
             this.simpleButton4.Text = "Upload ";
+            this.simpleButton4.Click += new System.EventHandler(this.simpleButton4_Click);
             // 
             // simpleButton1
             // 
             this.simpleButton1.Image = global::EFTesting.Properties.Resources.save;
-            this.simpleButton1.Location = new System.Drawing.Point(326, 499);
+            this.simpleButton1.Location = new System.Drawing.Point(326, 498);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(162, 39);
             this.simpleButton1.TabIndex = 77;
             this.simpleButton1.Text = "Process";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // lblTextDisplay
             // 
@@ -425,7 +427,7 @@
             // 
             // chkOnlineScaning
             // 
-            this.chkOnlineScaning.Location = new System.Drawing.Point(41, 452);
+            this.chkOnlineScaning.Location = new System.Drawing.Point(36, 451);
             this.chkOnlineScaning.Name = "chkOnlineScaning";
             this.chkOnlineScaning.Properties.Caption = "Online Scaning";
             this.chkOnlineScaning.Size = new System.Drawing.Size(102, 19);
@@ -433,17 +435,39 @@
             // 
             // chkOfflineScaning
             // 
-            this.chkOfflineScaning.Location = new System.Drawing.Point(41, 477);
+            this.chkOfflineScaning.Location = new System.Drawing.Point(36, 476);
             this.chkOfflineScaning.Name = "chkOfflineScaning";
             this.chkOfflineScaning.Properties.Caption = "Offline Scaning";
             this.chkOfflineScaning.Size = new System.Drawing.Size(102, 19);
             this.chkOfflineScaning.TabIndex = 80;
+            // 
+            // textfileOpen
+            // 
+            this.textfileOpen.FileName = "openFileDialog1";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txtDate.Location = new System.Drawing.Point(503, 505);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(184, 21);
+            this.txtDate.TabIndex = 81;
+            // 
+            // txtTime
+            // 
+            this.txtTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.txtTime.Location = new System.Drawing.Point(701, 505);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(184, 21);
+            this.txtTime.TabIndex = 82;
             // 
             // frmOparationScaning
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 569);
+            this.Controls.Add(this.txtTime);
+            this.Controls.Add(this.txtDate);
             this.Controls.Add(this.chkOfflineScaning);
             this.Controls.Add(this.chkOnlineScaning);
             this.Controls.Add(this.lblTextDisplay);
@@ -482,8 +506,6 @@
             this.Controls.Add(this.imgprofile);
             this.Name = "frmOparationScaning";
             this.Text = "Oparation Scaning";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmOparationScaning_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgprofile.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEmployeeName.Properties)).EndInit();
@@ -544,5 +566,8 @@
         private System.Windows.Forms.Label lblTextDisplay;
         private DevExpress.XtraEditors.CheckEdit chkOnlineScaning;
         private DevExpress.XtraEditors.CheckEdit chkOfflineScaning;
+        private System.Windows.Forms.OpenFileDialog textfileOpen;
+        private System.Windows.Forms.DateTimePicker txtDate;
+        private System.Windows.Forms.DateTimePicker txtTime;
     }
 }

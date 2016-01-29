@@ -22,7 +22,7 @@ namespace ITRACK.models
 
         public string OprationTagGenaratedTime { get; set; }
 
-
+        public DateTime GenaratedDate { get; set; }
         public bool isCompleteGenarateTags { get; set; }
 
         public virtual CuttingItem CuttingItem { get; set; }

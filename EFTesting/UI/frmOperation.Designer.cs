@@ -43,7 +43,6 @@
             this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.label13 = new System.Windows.Forms.Label();
             this.cmbOprationGrade = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label12 = new System.Windows.Forms.Label();
             this.cmboprationRole = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -113,6 +112,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(43, 38);
             this.btnClose.TabIndex = 39;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtSearchBox
             // 
@@ -243,7 +243,6 @@
             // 
             // xtraTabPage1
             // 
-            this.xtraTabPage1.Controls.Add(this.label13);
             this.xtraTabPage1.Controls.Add(this.cmbOprationGrade);
             this.xtraTabPage1.Controls.Add(this.label12);
             this.xtraTabPage1.Controls.Add(this.cmboprationRole);
@@ -264,16 +263,6 @@
             this.xtraTabPage1.Name = "xtraTabPage1";
             this.xtraTabPage1.Size = new System.Drawing.Size(1115, 395);
             this.xtraTabPage1.Text = "Header";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label13.Location = new System.Drawing.Point(82, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(279, 13);
-            this.label13.TabIndex = 48;
-            this.label13.Text = "Operation Genaral Information / Header Details ";
             // 
             // cmbOprationGrade
             // 
@@ -561,7 +550,7 @@
             this.grdSearch.Location = new System.Drawing.Point(22, 57);
             this.grdSearch.MainView = this.gridView2;
             this.grdSearch.Name = "grdSearch";
-            this.grdSearch.Size = new System.Drawing.Size(1118, 376);
+            this.grdSearch.Size = new System.Drawing.Size(1118, 436);
             this.grdSearch.TabIndex = 56;
             this.grdSearch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -671,6 +660,5 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label5;
         private DevExpress.XtraEditors.TextEdit txtPartName;
-        private System.Windows.Forms.Label label13;
     }
 }

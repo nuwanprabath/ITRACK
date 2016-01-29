@@ -60,6 +60,7 @@ namespace ITRACK.models
 
         public virtual ICollection<Award> Award { get; set; }
 
+        public virtual ICollection<OprationBarcodes> OprationBarcodes { get; set; }
         public virtual User User { get; set; }
 
         public virtual Workstation Workstation { get; set; }

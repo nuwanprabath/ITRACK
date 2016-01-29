@@ -28,63 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DevExpress.Utils.SuperToolTip superToolTip1 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem1 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem1 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem2 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip2 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem3 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem2 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem4 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip3 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem5 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem3 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem6 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip4 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem7 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem4 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem8 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip5 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem9 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem5 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem10 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip6 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem11 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem6 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem12 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip7 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem13 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem7 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem14 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip8 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem15 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem8 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipSeparatorItem toolTipSeparatorItem1 = new DevExpress.Utils.ToolTipSeparatorItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem16 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip9 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem17 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem9 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem18 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip10 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem19 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem10 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem20 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip11 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem21 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem11 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem22 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip12 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem23 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem12 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem24 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip13 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem25 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem13 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem26 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.SuperToolTip superToolTip14 = new DevExpress.Utils.SuperToolTip();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem27 = new DevExpress.Utils.ToolTipTitleItem();
-            DevExpress.Utils.ToolTipItem toolTipItem14 = new DevExpress.Utils.ToolTipItem();
-            DevExpress.Utils.ToolTipTitleItem toolTipTitleItem28 = new DevExpress.Utils.ToolTipTitleItem();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::EFTesting.UI.WaitForm1), true, true);
             this.btnDelete = new DevExpress.XtraEditors.SimpleButton();
             this.btnClose = new DevExpress.XtraEditors.SimpleButton();
             this.txtSearchBox = new DevExpress.XtraEditors.TextEdit();
@@ -297,7 +241,7 @@
             this.grdSearchBuyer.Location = new System.Drawing.Point(168, 125);
             this.grdSearchBuyer.MainView = this.gridView1;
             this.grdSearchBuyer.Name = "grdSearchBuyer";
-            this.grdSearchBuyer.Size = new System.Drawing.Size(741, 174);
+            this.grdSearchBuyer.Size = new System.Drawing.Size(741, 143);
             this.grdSearchBuyer.TabIndex = 35;
             this.grdSearchBuyer.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -320,15 +264,6 @@
             this.cmbForecastingRule.Properties.NullValuePrompt = "Select Status";
             this.cmbForecastingRule.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbForecastingRule.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem1.Text = "Please Fill Required Field";
-            toolTipItem1.LeftIndent = 6;
-            toolTipItem1.Text = "Please Select Forcasting Rule";
-            toolTipTitleItem2.LeftIndent = 6;
-            toolTipTitleItem2.Text = "Powerd By ITRACK ERP";
-            superToolTip1.Items.Add(toolTipTitleItem1);
-            superToolTip1.Items.Add(toolTipItem1);
-            superToolTip1.Items.Add(toolTipTitleItem2);
-            this.cmbForecastingRule.SuperTip = superToolTip1;
             this.cmbForecastingRule.TabIndex = 2;
             // 
             // label14
@@ -352,20 +287,18 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label12.Location = new System.Drawing.Point(50, 282);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(199, 13);
+            this.label12.Size = new System.Drawing.Size(171, 13);
             this.label12.TabIndex = 37;
             this.label12.Text = "Partial Delivery Options / Feed Po ";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label11.Location = new System.Drawing.Point(50, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(278, 13);
+            this.label11.Size = new System.Drawing.Size(234, 13);
             this.label11.TabIndex = 36;
             this.label11.Text = "General Style Infromation / Header Information";
             // 
@@ -381,15 +314,6 @@
             this.cmbStatus.Properties.NullValuePrompt = "Select Status";
             this.cmbStatus.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbStatus.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem3.Text = "Please Fill Required Field";
-            toolTipItem2.LeftIndent = 6;
-            toolTipItem2.Text = "Please Select Status";
-            toolTipTitleItem4.LeftIndent = 6;
-            toolTipTitleItem4.Text = "Powerd By ITRACK ERP";
-            superToolTip2.Items.Add(toolTipTitleItem3);
-            superToolTip2.Items.Add(toolTipItem2);
-            superToolTip2.Items.Add(toolTipTitleItem4);
-            this.cmbStatus.SuperTip = superToolTip2;
             this.cmbStatus.TabIndex = 6;
             // 
             // cmbGarmentType
@@ -404,15 +328,6 @@
             this.cmbGarmentType.Properties.NullValuePrompt = "Please Select Garment Type";
             this.cmbGarmentType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbGarmentType.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem5.Text = "Please Fill Required Fild";
-            toolTipItem3.LeftIndent = 6;
-            toolTipItem3.Text = "Please Select Garment Type";
-            toolTipTitleItem6.LeftIndent = 6;
-            toolTipTitleItem6.Text = "Powerd By ITRACK ERP";
-            superToolTip3.Items.Add(toolTipTitleItem5);
-            superToolTip3.Items.Add(toolTipItem3);
-            superToolTip3.Items.Add(toolTipTitleItem6);
-            this.cmbGarmentType.SuperTip = superToolTip3;
             this.cmbGarmentType.TabIndex = 5;
             // 
             // label10
@@ -451,15 +366,6 @@
             this.txtSeason.Properties.NullValuePrompt = "Please Enter Season";
             this.txtSeason.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtSeason.Size = new System.Drawing.Size(251, 20);
-            toolTipTitleItem7.Text = "Please Fill Required Field";
-            toolTipItem4.LeftIndent = 6;
-            toolTipItem4.Text = "Please Enter Season";
-            toolTipTitleItem8.LeftIndent = 6;
-            toolTipTitleItem8.Text = "Powerd By ITRACK ERP";
-            superToolTip4.Items.Add(toolTipTitleItem7);
-            superToolTip4.Items.Add(toolTipItem4);
-            superToolTip4.Items.Add(toolTipTitleItem8);
-            this.txtSeason.SuperTip = superToolTip4;
             this.txtSeason.TabIndex = 4;
             // 
             // label3
@@ -480,21 +386,12 @@
             this.txtArticle.Properties.NullValuePrompt = "Please Enter Article";
             this.txtArticle.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtArticle.Size = new System.Drawing.Size(251, 20);
-            toolTipTitleItem9.Text = "Please Fill Required Field";
-            toolTipItem5.LeftIndent = 6;
-            toolTipItem5.Text = "Please Enter Article No";
-            toolTipTitleItem10.LeftIndent = 6;
-            toolTipTitleItem10.Text = "Powerd By ITRACK ERP";
-            superToolTip5.Items.Add(toolTipTitleItem9);
-            superToolTip5.Items.Add(toolTipItem5);
-            superToolTip5.Items.Add(toolTipTitleItem10);
-            this.txtArticle.SuperTip = superToolTip5;
             this.txtArticle.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 108);
+            this.label2.Location = new System.Drawing.Point(50, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 25;
@@ -503,21 +400,12 @@
             // txtBuyerName
             // 
             this.txtBuyerName.EditValue = "";
-            this.txtBuyerName.Location = new System.Drawing.Point(168, 105);
+            this.txtBuyerName.Location = new System.Drawing.Point(168, 103);
             this.txtBuyerName.Name = "txtBuyerName";
             this.txtBuyerName.Properties.AccessibleDescription = "";
             this.txtBuyerName.Properties.NullValuePrompt = "Please Enter Buyer Name";
             this.txtBuyerName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtBuyerName.Size = new System.Drawing.Size(251, 20);
-            toolTipTitleItem11.Text = "Please Fill Required Field";
-            toolTipItem6.LeftIndent = 6;
-            toolTipItem6.Text = "Please Enter Style No";
-            toolTipTitleItem12.LeftIndent = 6;
-            toolTipTitleItem12.Text = "Powerd By ITRACK ERP";
-            superToolTip6.Items.Add(toolTipTitleItem11);
-            superToolTip6.Items.Add(toolTipItem6);
-            superToolTip6.Items.Add(toolTipTitleItem12);
-            this.txtBuyerName.SuperTip = superToolTip6;
             this.txtBuyerName.TabIndex = 2;
             this.txtBuyerName.EditValueChanged += new System.EventHandler(this.txtBuyerName_EditValueChanged);
             this.txtBuyerName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtBuyerName_KeyDown);
@@ -530,15 +418,6 @@
             this.txtRemark.Properties.NullText = "Shipping Address";
             this.txtRemark.Properties.NullValuePrompt = "Shipping Address";
             this.txtRemark.Size = new System.Drawing.Size(289, 96);
-            toolTipTitleItem13.Text = "Please Fill Required Field";
-            toolTipItem7.LeftIndent = 6;
-            toolTipItem7.Text = "Please Enter Remark";
-            toolTipTitleItem14.LeftIndent = 6;
-            toolTipTitleItem14.Text = "Powerd By ITRACK ERP";
-            superToolTip7.Items.Add(toolTipTitleItem13);
-            superToolTip7.Items.Add(toolTipItem7);
-            superToolTip7.Items.Add(toolTipTitleItem14);
-            this.txtRemark.SuperTip = superToolTip7;
             this.txtRemark.TabIndex = 7;
             this.txtRemark.UseOptimizedRendering = true;
             // 
@@ -569,16 +448,6 @@
             this.txtStyleNo.Properties.NullValuePrompt = "Please Enter Style No";
             this.txtStyleNo.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtStyleNo.Size = new System.Drawing.Size(251, 20);
-            toolTipTitleItem15.Text = "Please Fill Required Field";
-            toolTipItem8.LeftIndent = 6;
-            toolTipItem8.Text = "Please Enter Style No";
-            toolTipTitleItem16.LeftIndent = 6;
-            toolTipTitleItem16.Text = "Powerd By ITRACK ERP";
-            superToolTip8.Items.Add(toolTipTitleItem15);
-            superToolTip8.Items.Add(toolTipItem8);
-            superToolTip8.Items.Add(toolTipSeparatorItem1);
-            superToolTip8.Items.Add(toolTipTitleItem16);
-            this.txtStyleNo.SuperTip = superToolTip8;
             this.txtStyleNo.TabIndex = 1;
             // 
             // cmbFeedingRule
@@ -594,15 +463,6 @@
             this.cmbFeedingRule.Properties.NullValuePrompt = "Select Status";
             this.cmbFeedingRule.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbFeedingRule.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem17.Text = "Please Fill Required Field";
-            toolTipItem9.LeftIndent = 6;
-            toolTipItem9.Text = "Please Select Feeding Rule";
-            toolTipTitleItem18.LeftIndent = 6;
-            toolTipTitleItem18.Text = "Powerd By ITRACK ERP";
-            superToolTip9.Items.Add(toolTipTitleItem17);
-            superToolTip9.Items.Add(toolTipItem9);
-            superToolTip9.Items.Add(toolTipTitleItem18);
-            this.cmbFeedingRule.SuperTip = superToolTip9;
             this.cmbFeedingRule.TabIndex = 1;
             // 
             // xtraTabPage4
@@ -669,20 +529,18 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label21.Location = new System.Drawing.Point(85, 243);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(96, 13);
+            this.label21.Size = new System.Drawing.Size(82, 13);
             this.label21.TabIndex = 45;
             this.label21.Text = "Style Fabric List";
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
             this.label20.Location = new System.Drawing.Point(80, 29);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(272, 13);
+            this.label20.Size = new System.Drawing.Size(231, 13);
             this.label20.TabIndex = 44;
             this.label20.Text = "Style Fabric Details / Planed Fabric Consumtion";
             // 
@@ -692,15 +550,6 @@
             this.txtfRemark.Name = "txtfRemark";
             this.txtfRemark.Properties.NullValuePrompt = "Remark";
             this.txtfRemark.Size = new System.Drawing.Size(577, 66);
-            toolTipTitleItem19.Text = "Please Fill Required Field";
-            toolTipItem10.LeftIndent = 6;
-            toolTipItem10.Text = "Please Enter Remark";
-            toolTipTitleItem20.LeftIndent = 6;
-            toolTipTitleItem20.Text = "Powerd By ITRACK ERP";
-            superToolTip10.Items.Add(toolTipTitleItem19);
-            superToolTip10.Items.Add(toolTipItem10);
-            superToolTip10.Items.Add(toolTipTitleItem20);
-            this.txtfRemark.SuperTip = superToolTip10;
             this.txtfRemark.TabIndex = 5;
             this.txtfRemark.UseOptimizedRendering = true;
             // 
@@ -731,15 +580,6 @@
             this.txtFabricColor.Properties.NullValuePrompt = "Please Enter Fabric Color";
             this.txtFabricColor.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtFabricColor.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem21.Text = "Please Fill Required Field";
-            toolTipItem11.LeftIndent = 6;
-            toolTipItem11.Text = "Please Enter Fabric Type";
-            toolTipTitleItem22.LeftIndent = 6;
-            toolTipTitleItem22.Text = "Powerd By ITRACK ERP";
-            superToolTip11.Items.Add(toolTipTitleItem21);
-            superToolTip11.Items.Add(toolTipItem11);
-            superToolTip11.Items.Add(toolTipTitleItem22);
-            this.txtFabricColor.SuperTip = superToolTip11;
             this.txtFabricColor.TabIndex = 3;
             // 
             // label17
@@ -760,15 +600,6 @@
             this.txtPlanedConsumtion.Properties.NullValuePrompt = "Please Enter Planned Consumption";
             this.txtPlanedConsumtion.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtPlanedConsumtion.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem23.Text = "Please Fill Required Field";
-            toolTipItem12.LeftIndent = 6;
-            toolTipItem12.Text = "Please Enter Planed Consumption";
-            toolTipTitleItem24.LeftIndent = 6;
-            toolTipTitleItem24.Text = "Powerd By ITRACK ERP";
-            superToolTip12.Items.Add(toolTipTitleItem23);
-            superToolTip12.Items.Add(toolTipItem12);
-            superToolTip12.Items.Add(toolTipTitleItem24);
-            this.txtPlanedConsumtion.SuperTip = superToolTip12;
             this.txtPlanedConsumtion.TabIndex = 4;
             // 
             // label16
@@ -789,15 +620,6 @@
             this.txtFabricName.Properties.NullValuePrompt = "Please Enter Fabric Name";
             this.txtFabricName.Properties.NullValuePromptShowForEmptyValue = true;
             this.txtFabricName.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem25.Text = "Please Fill Required Field";
-            toolTipItem13.LeftIndent = 6;
-            toolTipItem13.Text = "Please Enter Fabric Name";
-            toolTipTitleItem26.LeftIndent = 6;
-            toolTipTitleItem26.Text = "Powerd By ITRACK ERP";
-            superToolTip13.Items.Add(toolTipTitleItem25);
-            superToolTip13.Items.Add(toolTipItem13);
-            superToolTip13.Items.Add(toolTipTitleItem26);
-            this.txtFabricName.SuperTip = superToolTip13;
             this.txtFabricName.TabIndex = 2;
             // 
             // cmbFabricType
@@ -814,15 +636,6 @@
             this.cmbFabricType.Properties.NullValuePrompt = "Select Fabric Type";
             this.cmbFabricType.Properties.NullValuePromptShowForEmptyValue = true;
             this.cmbFabricType.Size = new System.Drawing.Size(199, 20);
-            toolTipTitleItem27.Text = "Please Fill Required Field";
-            toolTipItem14.LeftIndent = 6;
-            toolTipItem14.Text = "Please Select Fabric Type";
-            toolTipTitleItem28.LeftIndent = 6;
-            toolTipTitleItem28.Text = "Powerd By ITRACK ERP";
-            superToolTip14.Items.Add(toolTipTitleItem27);
-            superToolTip14.Items.Add(toolTipItem14);
-            superToolTip14.Items.Add(toolTipTitleItem28);
-            this.cmbFabricType.SuperTip = superToolTip14;
             this.cmbFabricType.TabIndex = 1;
             // 
             // label15
@@ -923,7 +736,7 @@
             this.grdSearchStyle.Location = new System.Drawing.Point(12, 57);
             this.grdSearchStyle.MainView = this.gridView2;
             this.grdSearchStyle.Name = "grdSearchStyle";
-            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 375);
+            this.grdSearchStyle.Size = new System.Drawing.Size(1165, 390);
             this.grdSearchStyle.TabIndex = 38;
             this.grdSearchStyle.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -1053,5 +866,6 @@
         private DevExpress.XtraEditors.SimpleButton btnfAdd;
         private DevExpress.XtraGrid.GridControl grdFabricList;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
     }
 }

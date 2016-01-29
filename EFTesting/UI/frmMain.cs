@@ -24,6 +24,8 @@ namespace EFTesting.UI
         {
             DevExpress.UserSkins.TouchSkins.Register();
             DevExpress.UserSkins.BonusSkins.Register();
+            
+            ribbonControl1.Minimized = true;
 
             
         }
@@ -43,24 +45,21 @@ namespace EFTesting.UI
 
         private void barButtonItem9_ItemClick(object sender, ItemClickEventArgs e)
         {
-            splashScreenManager1.ShowWaitForm();
             UI.frmCompany objfrmMChild = new UI.frmCompany();
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
         }
 
         private void barButtonItem11_ItemClick(object sender, ItemClickEventArgs e)
         {
-            splashScreenManager1.ShowWaitForm();
             UI.frmBuyer objfrmMChild = new UI.frmBuyer();
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
         }
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             splashScreenManager1.ShowWaitForm();
             UI.frmStyleMaster objfrmMChild = new UI.frmStyleMaster();
             objfrmMChild.MdiParent = this;
@@ -97,6 +96,7 @@ namespace EFTesting.UI
 
         private void barButtonItem14_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             splashScreenManager1.ShowWaitForm();
             UI.frmParts objfrmMChild = new UI.frmParts();
             objfrmMChild.MdiParent = this;
@@ -106,6 +106,7 @@ namespace EFTesting.UI
 
         private void barButtonItem15_ItemClick(object sender, ItemClickEventArgs e)
         {
+
             splashScreenManager1.ShowWaitForm();
             UI.frmOperation objfrmMChild = new UI.frmOperation();
             objfrmMChild.MdiParent = this;
@@ -151,92 +152,69 @@ namespace EFTesting.UI
 
         private void barButtonItem19_ItemClick(object sender, ItemClickEventArgs e)
         {
-            splashScreenManager1.ShowWaitForm(); 
+            splashScreenManager1.ShowWaitForm();
             UI.frmProduction objfrmMChild = new UI.frmProduction();
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
             splashScreenManager1.CloseWaitForm();
         }
 
-        private void ribbonControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnCustomFieldSetup_ItemClick(object sender, ItemClickEventArgs e)
+        private void btnDayend_ItemClick(object sender, ItemClickEventArgs e)
         {
             splashScreenManager1.ShowWaitForm();
-            UI.frmCustomFieldsSetup objfrmMChild = new UI.frmCustomFieldsSetup();
+            UI.frmDayend objfrmMChild = new UI.frmDayend();
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
             splashScreenManager1.CloseWaitForm();
         }
 
-        private void btnItemMaster_ItemClick(object sender, ItemClickEventArgs e)
+        private void barButtonItem21_ItemClick(object sender, ItemClickEventArgs e)
         {
-            splashScreenManager1.ShowWaitForm();
-            UI.frmItemMaster objfrmMChild = new UI.frmItemMaster();
-            objfrmMChild.MdiParent = this;
-            objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
-
-        }
-
-        private void barButtonItem22_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            splashScreenManager1.ShowWaitForm();
-            UI.frmSupplierMaster objfrmMChild = new UI.frmSupplierMaster();
-            objfrmMChild.MdiParent = this;
-            objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
+            frmPoDeliveriesDialog dialog = new frmPoDeliveriesDialog();
+            dialog.ShowDialog();
         }
 
         private void barButtonItem23_ItemClick(object sender, ItemClickEventArgs e)
         {
-            splashScreenManager1.ShowWaitForm();
-            UI.frmPo objfrmMChild = new UI.frmPo();
-            objfrmMChild.MdiParent = this;
-            objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
-        }
-
-        private void barButtonItem24_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            splashScreenManager1.ShowWaitForm();
-            UI.frmRunningNo objfrmMChild = new UI.frmRunningNo();
-            objfrmMChild.MdiParent = this;
-            objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
-        }
-
-        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void barButtonItem10_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void barButtonItem26_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            splashScreenManager1.ShowWaitForm();
-            UI.frmGRN objfrmMChild = new UI.frmGRN();
-            objfrmMChild.MdiParent = this;
-            objfrmMChild.Show();
-            splashScreenManager1.CloseWaitForm();
-        
+            frmHourlyProductionDialog dialog = new frmHourlyProductionDialog();
+            dialog.ShowDialog();
         }
 
         private void barButtonItem27_ItemClick(object sender, ItemClickEventArgs e)
         {
+            frmIndividualProductionDialog dialog = new frmIndividualProductionDialog();
+            dialog.ShowDialog();
+        }
 
+        private void barButtonItem28_ItemClick(object sender, ItemClickEventArgs e)
+        {
             splashScreenManager1.ShowWaitForm();
-            UI.frmVechileReqForm objfrmMChild = new UI.frmVechileReqForm();
+            UI.frmScaningTimeScadual objfrmMChild = new UI.frmScaningTimeScadual();
             objfrmMChild.MdiParent = this;
             objfrmMChild.Show();
             splashScreenManager1.CloseWaitForm();
+        }
+
+        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            UI.frmOfflineScaning objfrmMChild = new UI.frmOfflineScaning();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+            splashScreenManager1.CloseWaitForm();
+        }
+
+        private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dailyProductionDialog dialog = new dailyProductionDialog();
+            dialog.ShowDialog();
+
+        }
+
+        private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            dlgBundleSelect dialog = new dlgBundleSelect();
+            dialog.ShowDialog();
         }
     }
 }
