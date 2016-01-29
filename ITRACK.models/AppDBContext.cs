@@ -103,6 +103,15 @@ namespace ITRACK.models
         public DbSet<IndividualProductionDetails> IndividualProductionDetails { get; set; }
 
 
+        public DbSet<CustomeFieldSetup> CustomeFieldSetup { get; set; }
+
+        public DbSet<PO> PO { get; set; }
+
+        public DbSet<Items> Items { get; set; }
+
+        public DbSet<VehicleRequisition> VehicleRequisition { get; set; }
+
+
 
         public DbSet<DividingPlanTemp> DividingPlanTemp { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -91,7 +91,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppDbContext.cs" />
     <Compile Include="CompanyVM.cs" />
+    <Compile Include="EFTesting\StyleVM.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Reports\ConnectionSettings\ConnectionDetails.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -215,7 +221,18 @@
     <Compile Include="Reports\BundleWiseProduction.Designer.cs">
       <DependentUpon>BundleWiseProduction.cs</DependentUpon>
     </Compile>
-    <Compile Include="StyleVM.cs" />
+    <Compile Include="Reports\Stock Report\rtGRN.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock Report\rtGRN.Designer.cs">
+      <DependentUpon>rtGRN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Stock Report\rtPO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Stock Report\rtPO.Designer.cs">
+      <DependentUpon>rtPO.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\dailyProductionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +299,12 @@
     <Compile Include="UI\frmcompanyDialog.Designer.cs">
       <DependentUpon>frmcompanyDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmCustomFieldsSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCustomFieldsSetup.Designer.cs">
+      <DependentUpon>frmCustomFieldsSetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmCuttingMaster.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +329,12 @@
     <Compile Include="UI\frmDividingPlanItem.Designer.cs">
       <DependentUpon>frmDividingPlanItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmGRN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmGRN.Designer.cs">
+      <DependentUpon>frmGRN.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmHourlyProductionDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -323,6 +352,12 @@
     </Compile>
     <Compile Include="UI\frmIndividualProductionDialog.Designer.cs">
       <DependentUpon>frmIndividualProductionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmItemMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmItemMaster.Designer.cs">
+      <DependentUpon>frmItemMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmMain.cs">
       <SubType>Form</SubType>
@@ -354,6 +389,12 @@
     <Compile Include="UI\frmParts.Designer.cs">
       <DependentUpon>frmParts.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmPo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmPo.Designer.cs">
+      <DependentUpon>frmPo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\frmPoDeliveriesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +418,12 @@
     </Compile>
     <Compile Include="UI\frmPurchaseOrder.Designer.cs">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmRunningNo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmRunningNo.Designer.cs">
+      <DependentUpon>frmRunningNo.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmScaningTimeScadual.cs">
       <SubType>Form</SubType>
@@ -402,6 +449,18 @@
     <Compile Include="UI\frmPromotion.Designer.cs">
       <DependentUpon>frmPromotion.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\frmSupplierMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmSupplierMaster.Designer.cs">
+      <DependentUpon>frmSupplierMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmVechileReqForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmVechileReqForm.Designer.cs">
+      <DependentUpon>frmVechileReqForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Opration List.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -420,19 +479,29 @@
     <Compile Include="UI\SplashScreen1.Designer.cs">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\StockRequisition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\StockRequisition.Designer.cs">
+      <DependentUpon>StockRequisition.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\User Accounts\frmLoging.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\User Accounts\frmLoging.Designer.cs">
       <DependentUpon>frmLoging.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\validate.cs" />
     <Compile Include="UI\WaitForm1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\WaitForm1.Designer.cs">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\_PORepo.cs" />
+    <Compile Include="UI\_RunningNo.cs" />
     <Compile Include="Validation\Validator.cs" />
+    <Compile Include="ViewModel\clsRuningNoEngine.cs" />
     <Compile Include="ViewModel\ConnectionTools.cs" />
     <Compile Include="ViewModel\CutReport.cs" />
     <Compile Include="ViewModel\GenarateTags.cs" />
@@ -507,6 +576,12 @@
     <EmbeddedResource Include="Reports\BundleWiseProduction.resx">
       <DependentUpon>BundleWiseProduction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock Report\rtGRN.resx">
+      <DependentUpon>rtGRN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Stock Report\rtPO.resx">
+      <DependentUpon>rtPO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\dailyProductionDialog.resx">
       <DependentUpon>dailyProductionDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -540,6 +615,9 @@
     <EmbeddedResource Include="UI\frmcompanyDialog.resx">
       <DependentUpon>frmcompanyDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmCustomFieldsSetup.resx">
+      <DependentUpon>frmCustomFieldsSetup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCuttingMaster.resx">
       <DependentUpon>frmCuttingMaster.cs</DependentUpon>
     </EmbeddedResource>
@@ -552,6 +630,9 @@
     <EmbeddedResource Include="UI\frmDividingPlanItem.resx">
       <DependentUpon>frmDividingPlanItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmGRN.resx">
+      <DependentUpon>frmGRN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmHourlyProductionDialog.resx">
       <DependentUpon>frmHourlyProductionDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,6 +641,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmIndividualProductionDialog.resx">
       <DependentUpon>frmIndividualProductionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmItemMaster.resx">
+      <DependentUpon>frmItemMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -576,6 +660,9 @@
     <EmbeddedResource Include="UI\frmParts.resx">
       <DependentUpon>frmParts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmPo.resx">
+      <DependentUpon>frmPo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPoDeliveriesDialog.resx">
       <DependentUpon>frmPoDeliveriesDialog.cs</DependentUpon>
     </EmbeddedResource>
@@ -587,6 +674,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmPurchaseOrder.resx">
       <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmRunningNo.resx">
+      <DependentUpon>frmRunningNo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmScaningTimeScadual.resx">
       <DependentUpon>frmScaningTimeScadual.cs</DependentUpon>
@@ -600,6 +690,12 @@
     <EmbeddedResource Include="UI\frmPromotion.resx">
       <DependentUpon>frmPromotion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmSupplierMaster.resx">
+      <DependentUpon>frmSupplierMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmVechileReqForm.resx">
+      <DependentUpon>frmVechileReqForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Opration List.resx">
       <DependentUpon>Opration List.cs</DependentUpon>
     </EmbeddedResource>
@@ -609,12 +705,17 @@
     <EmbeddedResource Include="UI\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\StockRequisition.resx">
+      <DependentUpon>StockRequisition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\User Accounts\frmLoging.resx">
       <DependentUpon>frmLoging.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\WaitForm1.resx">
       <DependentUpon>WaitForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="bin\Debug\EFTesting.vshost.exe.config" />
+    <None Include="bin\Debug\EFTesting.vshost.exe.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\EFTesting.Reports.dailyProductionByHour.datasource" />
     <None Include="Properties\DataSources\EFTesting.Reports.HourlyIndividualProduction.datasource" />
@@ -719,6 +820,25 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EFTesting.exe" />
+    <Content Include="bin\Debug\EFTesting.pdb" />
+    <Content Include="bin\Debug\EFTesting.vshost.exe" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\Excel.dll" />
+    <Content Include="bin\Debug\ITRACK.models.dll" />
+    <Content Include="bin\Debug\ITRACK.models.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\de\" />
+    <Folder Include="bin\Debug\es\" />
+    <Folder Include="bin\Debug\ja\" />
+    <Folder Include="bin\Debug\ru\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
