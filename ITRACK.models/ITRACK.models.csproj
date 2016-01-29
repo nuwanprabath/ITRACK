@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0391BADC-2DAD-449D-8BFC-B1638DE7A4A3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITRACK.models</RootNamespace>
+    <AssemblyName>ITRACK.models</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDBContext.cs" />
+    <Compile Include="Award.cs" />
+    <Compile Include="Bin.cs" />
+    <Compile Include="BundleDetails.cs" />
+    <Compile Include="BundleHeader.cs" />
+    <Compile Include="Buyer.cs" />
+    <Compile Include="clsTempOpration.cs" />
+    <Compile Include="company.cs" />
+    <Compile Include="CustomeFieldSetup.cs" />
+    <Compile Include="CuttingHeader.cs" />
+    <Compile Include="CuttingItem.cs" />
+    <Compile Include="DividingPlan.cs" />
+    <Compile Include="DividingPlanItem.cs" />
+    <Compile Include="DividingPlanTemp.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="ExpressionBuilder.cs" />
+    <Compile Include="FabricDetails.cs" />
+    <Compile Include="GenaricRepository.cs" />
+    <Compile Include="GRN.cs" />
+    <Compile Include="GrnItems.cs" />
+    <Compile Include="group.cs" />
+    <Compile Include="IGenaricRepository.cs" />
+    <Compile Include="Items.cs" />
+    <Compile Include="ItrackContextInitializer.cs" />
+    <Compile Include="Migrations\201510090607127_InitialCreate.cs" />
+    <Compile Include="Migrations\201510090607127_InitialCreate.Designer.cs">
+      <DependentUpon>201510090607127_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510090632241_Description.cs" />
+    <Compile Include="Migrations\201510090632241_Description.Designer.cs">
+      <DependentUpon>201510090632241_Description.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510161010136_Colors.cs" />
+    <Compile Include="Migrations\201510161010136_Colors.Designer.cs">
+      <DependentUpon>201510161010136_Colors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510161223132_GrnItems.cs" />
+    <Compile Include="Migrations\201510161223132_GrnItems.Designer.cs">
+      <DependentUpon>201510161223132_GrnItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201510260712056_PO.cs" />
+    <Compile Include="Migrations\201510260712056_PO.Designer.cs">
+      <DependentUpon>201510260712056_PO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511300734256_StockRequisition.cs" />
+    <Compile Include="Migrations\201511300734256_StockRequisition.Designer.cs">
+      <DependentUpon>201511300734256_StockRequisition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601290737116_StockLedger.cs" />
+    <Compile Include="Migrations\201601290737116_StockLedger.Designer.cs">
+      <DependentUpon>201601290737116_StockLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601290848430_VehicleRequisition.cs" />
+    <Compile Include="Migrations\201601290848430_VehicleRequisition.Designer.cs">
+      <DependentUpon>201601290848430_VehicleRequisition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601290904225_Test.cs" />
+    <Compile Include="Migrations\201601290904225_Test.Designer.cs">
+      <DependentUpon>201601290904225_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="NestedExpression.cs" />
+    <Compile Include="OperationPool.cs" />
+    <Compile Include="OprationBarcodes.cs" />
+    <Compile Include="PartDefinition.cs" />
+    <Compile Include="PastEmployeement.cs" />
+    <Compile Include="PO.cs" />
+    <Compile Include="PoItems.cs" />
+    <Compile Include="Promotion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseOrder.cs" />
+    <Compile Include="PurchaseOrderItems.cs" />
+    <Compile Include="Rack.cs" />
+    <Compile Include="RunningNo.cs" />
+    <Compile Include="SketchDefinition.cs" />
+    <Compile Include="SqlBulkCopy.cs" />
+    <Compile Include="StockLedger.cs" />
+    <Compile Include="StockRequisition.cs" />
+    <Compile Include="Style.cs" />
+    <Compile Include="StyleOperation.cs" />
+    <Compile Include="SupplierMaster.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="VehicleRequisition.cs" />
+    <Compile Include="Werehouse.cs" />
+    <Compile Include="Workflow.cs" />
+    <Compile Include="WorkflowSetup.cs" />
+    <Compile Include="Workstation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201510090607127_InitialCreate.resx">
+      <DependentUpon>201510090607127_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510090632241_Description.resx">
+      <DependentUpon>201510090632241_Description.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510161010136_Colors.resx">
+      <DependentUpon>201510161010136_Colors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510161223132_GrnItems.resx">
+      <DependentUpon>201510161223132_GrnItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201510260712056_PO.resx">
+      <DependentUpon>201510260712056_PO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511300734256_StockRequisition.resx">
+      <DependentUpon>201511300734256_StockRequisition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601290737116_StockLedger.resx">
+      <DependentUpon>201601290737116_StockLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601290848430_VehicleRequisition.resx">
+      <DependentUpon>201601290848430_VehicleRequisition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601290904225_Test.resx">
+      <DependentUpon>201601290904225_Test.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
