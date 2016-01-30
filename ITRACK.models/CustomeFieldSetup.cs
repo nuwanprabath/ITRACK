@@ -11,7 +11,7 @@ namespace ITRACK.models
 
         public Int32 CustomeFieldSetupID { get; set; }
 
-        public string  ItemType { get; set; }
+        public string ItemType { get; set; }
 
         public string CustomField1 { get; set; }
 

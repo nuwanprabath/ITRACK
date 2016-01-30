@@ -100,10 +100,10 @@ namespace ITRACK.models
 
         public DbSet<DailyProduction> DailyProduction { get; set; }
 
+        public DbSet<CustomeFieldSetup> CustomeFieldSetup { get; set; }
+
         public DbSet<IndividualProductionDetails> IndividualProductionDetails { get; set; }
 
-
-        public DbSet<CustomeFieldSetup> CustomeFieldSetup { get; set; }
 
         public DbSet<PO> PO { get; set; }
 

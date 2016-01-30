@@ -216,5 +216,14 @@ namespace EFTesting.UI
             dlgBundleSelect dialog = new dlgBundleSelect();
             dialog.ShowDialog();
         }
+
+        private void barButtonItem33_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            splashScreenManager1.ShowWaitForm();
+            UI.frmCustomFieldsSetup objfrmMChild = new UI.frmCustomFieldsSetup();
+            objfrmMChild.MdiParent = this;
+            objfrmMChild.Show();
+            splashScreenManager1.CloseWaitForm();
+        }
     }
 }

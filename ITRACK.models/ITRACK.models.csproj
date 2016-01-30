@@ -86,71 +86,6 @@
     <Compile Include="ItrackContextInitializer.cs" />
     <Compile Include="LayinDetails.cs" />
     <Compile Include="MainStock.cs" />
-    <Compile Include="Migrations\201508100342084_InitialCreate.cs" />
-    <Compile Include="Migrations\201508100342084_InitialCreate.Designer.cs">
-      <DependentUpon>201508100342084_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509070730568_Add-PoNo.cs" />
-    <Compile Include="Migrations\201509070730568_Add-PoNo.Designer.cs">
-      <DependentUpon>201509070730568_Add-PoNo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509250547108_OperationRole.cs" />
-    <Compile Include="Migrations\201509250547108_OperationRole.Designer.cs">
-      <DependentUpon>201509250547108_OperationRole.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509280859146_ScaningTimeSchadual.cs" />
-    <Compile Include="Migrations\201509280859146_ScaningTimeSchadual.Designer.cs">
-      <DependentUpon>201509280859146_ScaningTimeSchadual.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509281004289_ChangeScaningTimeType.cs" />
-    <Compile Include="Migrations\201509281004289_ChangeScaningTimeType.Designer.cs">
-      <DependentUpon>201509281004289_ChangeScaningTimeType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510150539068_HourNo.cs" />
-    <Compile Include="Migrations\201510150539068_HourNo.Designer.cs">
-      <DependentUpon>201510150539068_HourNo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510220309511_OpNo.cs" />
-    <Compile Include="Migrations\201510220309511_OpNo.Designer.cs">
-      <DependentUpon>201510220309511_OpNo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510220318268_GenaratedDate.cs" />
-    <Compile Include="Migrations\201510220318268_GenaratedDate.Designer.cs">
-      <DependentUpon>201510220318268_GenaratedDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510260629318_Promotion.cs" />
-    <Compile Include="Migrations\201510260629318_Promotion.Designer.cs">
-      <DependentUpon>201510260629318_Promotion.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201510260722042_PromotedDate.cs" />
-    <Compile Include="Migrations\201510260722042_PromotedDate.Designer.cs">
-      <DependentUpon>201510260722042_PromotedDate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511040403142_PromotionID.cs" />
-    <Compile Include="Migrations\201511040403142_PromotionID.Designer.cs">
-      <DependentUpon>201511040403142_PromotionID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511050633361_DailyProduction.cs" />
-    <Compile Include="Migrations\201511050633361_DailyProduction.Designer.cs">
-      <DependentUpon>201511050633361_DailyProduction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511100309204_OpNo1.cs" />
-    <Compile Include="Migrations\201511100309204_OpNo1.Designer.cs">
-      <DependentUpon>201511100309204_OpNo1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511160454300_Type.cs" />
-    <Compile Include="Migrations\201511160454300_Type.Designer.cs">
-      <DependentUpon>201511160454300_Type.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511160458569_EmployeeID.cs" />
-    <Compile Include="Migrations\201511160458569_EmployeeID.Designer.cs">
-      <DependentUpon>201511160458569_EmployeeID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512011107016_S.cs" />
-    <Compile Include="Migrations\201512011107016_S.Designer.cs">
-      <DependentUpon>201512011107016_S.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NestedExpression.cs" />
     <Compile Include="OperationPool.cs" />
     <Compile Include="OprationBarcodes.cs" />
@@ -182,56 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201508100342084_InitialCreate.resx">
-      <DependentUpon>201508100342084_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509070730568_Add-PoNo.resx">
-      <DependentUpon>201509070730568_Add-PoNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509250547108_OperationRole.resx">
-      <DependentUpon>201509250547108_OperationRole.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509280859146_ScaningTimeSchadual.resx">
-      <DependentUpon>201509280859146_ScaningTimeSchadual.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509281004289_ChangeScaningTimeType.resx">
-      <DependentUpon>201509281004289_ChangeScaningTimeType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510150539068_HourNo.resx">
-      <DependentUpon>201510150539068_HourNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510220309511_OpNo.resx">
-      <DependentUpon>201510220309511_OpNo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510220318268_GenaratedDate.resx">
-      <DependentUpon>201510220318268_GenaratedDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510260629318_Promotion.resx">
-      <DependentUpon>201510260629318_Promotion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201510260722042_PromotedDate.resx">
-      <DependentUpon>201510260722042_PromotedDate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511040403142_PromotionID.resx">
-      <DependentUpon>201511040403142_PromotionID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511050633361_DailyProduction.resx">
-      <DependentUpon>201511050633361_DailyProduction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511100309204_OpNo1.resx">
-      <DependentUpon>201511100309204_OpNo1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511160454300_Type.resx">
-      <DependentUpon>201511160454300_Type.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511160458569_EmployeeID.resx">
-      <DependentUpon>201511160458569_EmployeeID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512011107016_S.resx">
-      <DependentUpon>201512011107016_S.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

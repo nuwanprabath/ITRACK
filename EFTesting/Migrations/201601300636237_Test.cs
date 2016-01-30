@@ -1,9 +1,9 @@
-namespace ITRACK.models.Migrations
+namespace EFTesting.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class StockRequisition : DbMigration
+    public partial class Test : DbMigration
     {
         public override void Up()
         {
